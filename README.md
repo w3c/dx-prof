@@ -9,6 +9,7 @@ This repository contains the *Profiles Vocabulary* work of the *Dataset Exchange
 
 ## Working Documents
 
+- [DXWG Use cases and requirements](https://w3c.github.io/dxwg/ucr/)
 - [Editors' Draft](https://w3c.github.io/dx-prof/)
   - [Latest Publication](https://www.w3.org/TR/dx-prof/)
   - [Working Group Note](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/)
