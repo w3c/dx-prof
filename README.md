@@ -1,6 +1,6 @@
 # DXWG - Profiles Vocabulary
 
-This repository contains the *Profiles Vocabulary* work of the *Dataset Exchange Working Group (DXWG).
+This repository contains the *Profiles Vocabulary* work of the *Dataset Exchange Working Group* (DXWG).
 
 - [DXWG's home page](https://www.w3.org/2017/dxwg/)
 - [Charter](https://www.w3.org/2017/dxwg/charter)
@@ -9,7 +9,8 @@ This repository contains the *Profiles Vocabulary* work of the *Dataset Exchange
 
 ## Working Documents
 
-- [The Profiles Vocabulary (Editors' Draft)](https://w3c.github.io/dx-prof/)
-  - [The Profiles Vocabulary Third Public Working Draft](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/)
-  - [The Profiles Vocabulary Second Public Working Draft](https://www.w3.org/TR/2019/WD-dx-prof-20190402/)
-  - [The Profiles Vocabulary First Public Working Draft](https://www.w3.org/TR/2018/WD-dx-prof-20181218/)
+- [Editors' Draft](https://w3c.github.io/dx-prof/)
+  - [Latest Publication](https://www.w3.org/TR/dx-prof/)
+  - [Working Group Note](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/)
+  - [Second Public Working Draft](https://www.w3.org/TR/2019/WD-dx-prof-20190402/)
+  - [First Public Working Draft](https://www.w3.org/TR/2018/WD-dx-prof-20181218/)
