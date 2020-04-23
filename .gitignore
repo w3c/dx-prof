@@ -6,3 +6,6 @@ catalog-v001.xml
 
 # JetBrains tools' indexes
 .idea/
+
+# Python Virtual Environment
+venv/
