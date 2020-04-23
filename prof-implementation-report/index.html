@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <title>The Profiles Vocabulary Implementation Report</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
+  <script class="remove" src="config.js"></script>
+  <style>
+    table{width:100%;}
+    .nr{text-align:center;}
+    .small{font-size:.8em}
+  </style>
+  <!--<link rel="stylesheet" type="text/css" href="extra.css">-->
+</head>
+<body class="informative">
+<section id='abstract'>
+  <p>
+    This document reports implementations of the Profiles Vocabulary [[DX-PROF|PROF]].
+  </p>
+</section>
+<section id='sotd'>
+</section>
+<section id="introduction">
+  <h2>Introduction</h2>
+  <p>
+    The Profiles Vocabulary (PROF) is an RDF vocabulary created to allow the machine-readable description of profiles
+    of specifications for information resources.
+  </p>
+  <p>
+    To show that PROF's constructed sensibly and that all parts of it are useful, we have collected here evidence of
+    value, in the form of vocabulary element use (see <a href="#evidence"></a>). The results are summarized in this report.
+  </p>
+  <section id="namespace-prefixes">
+    <h3>Namespace prefixes</h3>
+    <p>
+      In this document we will employ the following namespace prefixes:
+    </p>
+    <dl>
+      <dt><code>prof</code></dt>
+      <dd>
+        <code><a href="http://www.w3.org/ns/dx/prof/">http://www.w3.org/ns/dx/prof/</a></code><br />
+        The namespace for PROF
+      </dd>
+      <dt><code>role</code></dt>
+      <dd>
+        <code>http://www.w3.org/ns/dx/prof/role/</code><br />
+        The namespace for PROF's <code>prof:ResourceRole</code> vocabulary
+      </dd>
+      <dt><code>earl</code></dt>
+      <dd>
+        <code><a href="http://www.w3.org/ns/earl#">http://www.w3.org/ns/earl#</a></code><br />
+        Evaluation and Report Language
+      </dd>
+    </dl>
+  </section>
+  <section id="methodology">
+    <h3>Methodology</h3>
+    <p>We followed the steps described below to collect evidence for the use of elements of [[DX-PROF|PROF]]:</p>
+    <ol>
+      <li>
+        Identified implementations
+        <ul>
+          <li>
+            We identified both direct usage of the vocabulary terms in data (RDF ontologies and datasets) and systems
+            that utilise the vocabulary in software
+          </li>
+        </ul>
+      </li>
+      <li>
+        Tabulated the implementations
+      </li>
+      <li>
+        Tabulated the use of each vocabulary element implemented
+      </li>
+    </ol>
+    <p>
+      We verified the claims made by the various implementations using a test suite which is detailed in [[PROF-TESTING]]
+    </p>
+  </section>
+  <section id="exit-criteria">
+    <h3>Meeting the exit criteria</h3>
+    <p>
+      In like with the <abbr title="Dataset Exchange Working Group">DXWG</abbr>'s expectations for publication
+      implementation evidence, as given in the <a href="https://www.w3.org/2017/dxwg/charter">DXWG charter</a>, we have
+      sought at least two independent implementations for every PROF element to advance PROF from a Working Group note
+      to a Candidate Recommendation.</p>
+  </section>
+</section>
+<section id="testsuite">
+  <h3>Test Suite</h3>
+  <p>
+    To verify the claims of implementations, test suite software was created. The software uses the
+    <a href="https://pypi.org/project/pyshacl/">pySHACL</a>, an open-source [[SHACL]] validation tool, to validated
+    RDF implementations of PROF.
+  </p>
+  <p>
+    The code for the test suite is stored in the following code repository location:
+  </p>
+  <ul>
+    <li><a href="https://github.com/w3c/dx-prof/testsuite/">https://github.com/w3c/dx-prof/testsuite/</a></li>
+  </ul>
+  <p>
+    That repository contains notes on how to apply the test suite.
+  </p>
+  <h4>Test Suite Results</h4>
+  <p>
+    The results from applying this test suite to implementations are given in the tables in <a href="#evidence"></a>.
+  </p>
+</section>
+<section id="evidence">
+  <h2>Implementation Evidence</h2>
+  <section id="implementations">
+    <h3>Implementations</h3>
+    <table id="table-implementations" class="simple">
+    <caption><strong>Table 1:</strong> Known Data Implementations of PROF</caption>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Implementer(s)</th>
+      <th>Location online</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><strong>I1</strong></td>
+      <td>The LocI Ontology</td>
+      <td>
+        <p>
+          An ontology to govern Linked Data resources published within the Loc-I project.
+        </p>
+        <p>
+          This ontology adds further constraints to classes in the GeoSPARQL, DCAT and VoID ontologies to produce
+          classes of its own. It also provides constraint language (Shapes) files which can be used to validate data
+          claiming conformance to the Loci Ontology.
+        </p>
+        <p>
+          <em>
+            This ontology's relationships to the things that it profiles and the relationships between its parts are
+            described using PROF.
+          </em>
+        </p>
+      </td>
+      <td>
+        <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+        (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>) &amp;
+        <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D Cox</a>
+        (<a href="https://www.csiro.au">CSIRO</a>) via the
+        <a href="http://www.linked.data.gov.au">Australian Government Linked Data Working Group</a>
+      </td>
+      <td>
+        <a href="http://linked.data.gov.au/def/loci">http://linked.data.gov.au/def/loci</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>I2</strong></td>
+      <td>Open Data Rights Language Best Practice - Profiling</td>
+      <td>
+        <p>
+          Good practices in developing, defining and making public an ODRL Profile.
+        </p>
+        <p>
+          This document describes how all resources - named as artifacts - which are relevant for an ODRL Profile can be
+          described and related to one another using PROF.
+        </p>
+      </td>
+      <td>
+        <a href="mailto:mwsteidl@newsit.biz">Michael Steidl</a> (<a href="https://newsit.biz">NewsIT</a>) via the
+        <a href="https://www.w3.org/community/odrl/">W3C's ODRL Community Group</a>
+      </td>
+      <td>
+        <a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">https://w3c.github.io/odrl/profile-bp/#profilevocab</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>I3</strong></td>
+      <td>Open Geospatial Consortium's Specifications Hierarchy</td>
+      <td>
+        <p>
+          Rob to complete
+        </p>
+        <p>
+          This collection of specifications and profiles of them, and their parts, are all described using PROF. Of
+          particular interest is the large hierarchy of profiles created.
+        </p>
+      </td>
+      <td>
+        <a href="https://orcid.org/0000-0002-7878-2693">Rob Atkinson</a>
+        (<a href="http://www.ogc.org">Open Geospatial Consortium</a>)
+      </td>
+      <td>
+        <a href="https://docs.opengeospatial.org/">https://docs.opengeospatial.org/</a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>I4</strong></td>
+      <td>Cheka</td>
+      <td>
+        <p>A profile hierarchy-based RDF graph validation tool written in Python.</p>
+        <p>
+          <em>
+            This tool uses conformance claims to profiles in data, indicated as suggested by
+            <a href="https://www.w3.org/TR/dx-prof/#introduction">PROF's Introduction</a> with the use of <code>dct:conformsTo</code>,
+            to validate that data. It traverses a profile hierarchy "up" from the profile the data claims conformance to,
+            to find all the validators of that profile and of the things (specifications or other profiles) that it
+            profiles and thus, by PROF's definitions, the data must also conform to.
+          </em>
+        </p>
+      </td>
+      <td>
+        <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+        (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
+      </td>
+      <td>
+        <a href="https://github.com/surroundaustralia/cheka">https://github.com/surroundaustralia/cheka</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </section>
+  <section id="claims-per-instruction">
+    <h3>Implementation claims per Vocabulary Element</h3>
+    <table id="table-element-implementations" class="simple">
+      <caption><strong>Table 2:</strong> Implementations of PROF per element</caption>
+      <thead>
+      <tr>
+        <th>Element</th>
+        <th>Label</th>
+        <th>Implementer(s)</th>
+        <th>Location online</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>xx</strong></td>
+        <td>xx</td>
+        <td><a href="xx">xx</a></td>
+        <td><a href="xx">xx</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+<section id="analysis">
+  <h3>General analysis</h3>
+</section>
+<section id="acknowledgements">
+  <h2>Acknowledgements</h2>
+  <p>
+    The editors gratefully acknowledge the contributions made to gathering evidence for [[DX-PROF|PROF]] and reviewing
+    this report by <a href="https://www.w3.org/2000/09/dbwg/details?group=99375&amp;public=1">all members of the Dataset
+    Exchange Working Group (DXWG)</a>.
+  </p>
+</section>
+</body>
+</html>
