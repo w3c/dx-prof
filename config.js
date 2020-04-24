@@ -1,7 +1,7 @@
 var respecConfig = {
     specStatus: "WG-NOTE",
     shortName: "dx-prof",
-    edDraftURI: "https://w3c.github.io/dxwg/prof/",
+    edDraftURI: "https://w3c.github.io/dx-prof/",
     prevRecURI: "https://www.w3.org/TR/2019/WD-dx-prof-20190402/",
     canonicalURI: "TR",
     editors: [
@@ -25,8 +25,8 @@ var respecConfig = {
     wgPatentURI: "https://www.w3.org/2004/01/pp-impl/99375/status",
     inlineCSS: "true",
     lint: "false",
-    issueBase: "https://github.com/w3c/dxwg/issues/",
-    github:    "https://github.com/w3c/dxwg/",
+    issueBase: "https://github.com/w3c/dx-prof/issues/",
+    github:    "https://github.com/w3c/dx-prof/",
     localBiblio: {
         PDF: {
             href: "https://www.iso.org/standard/51502.html",
