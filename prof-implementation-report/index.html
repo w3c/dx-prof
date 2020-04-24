@@ -112,112 +112,139 @@
   <section id="implementations">
     <h3>Implementations</h3>
     <table id="table-implementations" class="simple">
-    <caption><strong>Table 1:</strong> Known Data Implementations of PROF</caption>
-    <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Implementer(s)</th>
-      <th>Location online</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td><strong>I1</strong></td>
-      <td>The LocI Ontology</td>
-      <td>
-        <p>
-          An ontology to govern Linked Data resources published within the Loc-I project.
-        </p>
-        <p>
-          This ontology adds further constraints to classes in the GeoSPARQL, DCAT and VoID ontologies to produce
-          classes of its own. It also provides constraint language (Shapes) files which can be used to validate data
-          claiming conformance to the Loci Ontology.
-        </p>
-        <p>
-          <em>
-            This ontology's relationships to the things that it profiles and the relationships between its parts are
-            described using PROF.
-          </em>
-        </p>
-      </td>
-      <td>
-        <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
-        (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>) &amp;
-        <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D Cox</a>
-        (<a href="https://www.csiro.au">CSIRO</a>) via the
-        <a href="http://www.linked.data.gov.au">Australian Government Linked Data Working Group</a>
-      </td>
-      <td>
-        <a href="http://linked.data.gov.au/def/loci">http://linked.data.gov.au/def/loci</a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>I2</strong></td>
-      <td>Open Data Rights Language Best Practice - Profiling</td>
-      <td>
-        <p>
-          Good practices in developing, defining and making public an ODRL Profile.
-        </p>
-        <p>
-          This document describes how all resources - named as artifacts - which are relevant for an ODRL Profile can be
-          described and related to one another using PROF.
-        </p>
-      </td>
-      <td>
-        <a href="mailto:mwsteidl@newsit.biz">Michael Steidl</a> (<a href="https://newsit.biz">NewsIT</a>) via the
-        <a href="https://www.w3.org/community/odrl/">W3C's ODRL Community Group</a>
-      </td>
-      <td>
-        <a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">https://w3c.github.io/odrl/profile-bp/#profilevocab</a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>I3</strong></td>
-      <td>Open Geospatial Consortium's Specifications Hierarchy</td>
-      <td>
-        <p>
-          Rob to complete
-        </p>
-        <p>
-          This collection of specifications and profiles of them, and their parts, are all described using PROF. Of
-          particular interest is the large hierarchy of profiles created.
-        </p>
-      </td>
-      <td>
-        <a href="https://orcid.org/0000-0002-7878-2693">Rob Atkinson</a>
-        (<a href="http://www.ogc.org">Open Geospatial Consortium</a>)
-      </td>
-      <td>
-        <a href="https://docs.opengeospatial.org/">https://docs.opengeospatial.org/</a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>I4</strong></td>
-      <td>Cheka</td>
-      <td>
-        <p>A profile hierarchy-based RDF graph validation tool written in Python.</p>
-        <p>
-          <em>
-            This tool uses conformance claims to profiles in data, indicated as suggested by
-            <a href="https://www.w3.org/TR/dx-prof/#introduction">PROF's Introduction</a> with the use of <code>dct:conformsTo</code>,
-            to validate that data. It traverses a profile hierarchy "up" from the profile the data claims conformance to,
-            to find all the validators of that profile and of the things (specifications or other profiles) that it
-            profiles and thus, by PROF's definitions, the data must also conform to.
-          </em>
-        </p>
-      </td>
-      <td>
-        <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
-        (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
-      </td>
-      <td>
-        <a href="https://github.com/surroundaustralia/cheka">https://github.com/surroundaustralia/cheka</a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+      <caption><strong>Table 1:</strong> Known Data Implementations of PROF</caption>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th style="width:50%;">Description</th>
+        <th>Implementer(s)</th>
+        <th>Location online</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>I1</strong></td>
+        <td>The LocI Ontology</td>
+        <td>
+          <p>
+            An ontology to govern Linked Data resources published within the Loc-I project.
+          </p>
+          <p>
+            This ontology adds further constraints to classes in the GeoSPARQL, DCAT and VoID ontologies to produce
+            classes of its own. It also provides constraint language (Shapes) files which can be used to validate data
+            claiming conformance to the Loci Ontology.
+          </p>
+          <p>
+            <em>
+              This ontology's relationships to the things that it profiles and the relationships between its parts are
+              described using PROF.
+            </em>
+          </p>
+        </td>
+        <td>
+          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>) &amp;
+          <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D Cox</a>
+          (<a href="https://www.csiro.au">CSIRO</a>) via the
+          <a href="http://www.linked.data.gov.au">Australian Government Linked Data Working Group</a>
+        </td>
+        <td>
+          <a href="http://linked.data.gov.au/def/loci">http://linked.data.gov.au/def/loci</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>I2</strong></td>
+        <td>Open Data Rights Language Best Practice - Profiling</td>
+        <td>
+          <p>
+            Good practices in developing, defining and making public an ODRL Profile.
+          </p>
+          <p>
+            This document describes how all resources - named as artifacts - which are relevant for an ODRL Profile can be
+            described and related to one another using PROF.
+          </p>
+        </td>
+        <td>
+          <a href="mailto:mwsteidl@newsit.biz">Michael Steidl</a> (<a href="https://newsit.biz">NewsIT</a>) via the
+          <a href="https://www.w3.org/community/odrl/">W3C's ODRL Community Group</a>
+        </td>
+        <td>
+          <a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">https://w3c.github.io/odrl/profile-bp/#profilevocab</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>I3</strong></td>
+        <td>Open Geospatial Consortium's Specifications Hierarchy</td>
+        <td>
+          <p>
+            Rob to complete
+          </p>
+          <p>
+            This collection of specifications and profiles of them, and their parts, are all described using PROF. Of
+            particular interest is the large hierarchy of profiles created.
+          </p>
+        </td>
+        <td>
+          <a href="https://orcid.org/0000-0002-7878-2693">Rob Atkinson</a>
+          (<a href="http://www.ogc.org">Open Geospatial Consortium</a>)
+        </td>
+        <td>
+          <a href="https://docs.opengeospatial.org/">https://docs.opengeospatial.org/</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>I4</strong></td>
+        <td>Cheka</td>
+        <td>
+          <p>A profile hierarchy-based RDF graph validation tool written in Python.</p>
+          <p>
+            <em>
+              This tool uses conformance claims to profiles in data, indicated as suggested by
+              <a href="https://www.w3.org/TR/dx-prof/#introduction">PROF's Introduction</a> with the use of <code>dct:conformsTo</code>,
+              to validate that data. It traverses a profile hierarchy "up" from the profile the data claims conformance to,
+              to find all the validators of that profile and of the things (specifications or other profiles) that it
+              profiles and thus, by PROF's definitions, the data must also conform to.
+            </em>
+          </p>
+        </td>
+        <td>
+          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
+        </td>
+        <td>
+          <a href="https://github.com/surroundaustralia/cheka">https://github.com/surroundaustralia/cheka</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>I5</strong></td>
+        <td>W3ID Profiles Catalogue</td>
+        <td>
+          <p>A cataologue of profiles using the W3ID persistent URI namespace.</p>
+          <p>
+            <em>
+              There are multiple PROF profiles listed in this catalogue whose purpose is to deliver their content online and to allocate each of them a persistent URI.
+            </em>
+          </p>
+        </td>
+        <td>
+          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
+        </td>
+        <td>
+          <p>
+            <a href="https://w3id.org/profile/">https://w3id.org/profile/</a> (persistent URI location)
+          </p>
+          <p>
+            <a href="https://github.com/nicholascar/w3id-profiles-catalogue">https://github.com/nicholascar/w3id-profiles-catalogue</a> (repository of content)
+          </p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      It is a requirement for W3C implementations to be <em>independent</em> thus the implementations above by the same implementors are counted as a single implementation. Therefore, the independent implementation groups above are: (1) I1, I4 & I5 (Nicholas Car and others), (2) I2 (ODRL Community Group) &amp; (3) I3 (Open Geospatial Consortium)
+    </div>
   </section>
   <section id="claims-per-instruction">
     <h3>Implementation claims per Vocabulary Element</h3>
