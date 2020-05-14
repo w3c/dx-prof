@@ -1,7 +1,7 @@
 var respecConfig = {
     specStatus: "WG-NOTE",
     shortName: "dx-prof",
-    edDraftURI: "https://w3c.github.io/dx-prof/",
+    edDraftURI: "https://w3c.github.io/dx-prof/prof/",
     prevRecURI: "https://www.w3.org/TR/2019/WD-dx-prof-20190402/",
     canonicalURI: "TR",
     editors: [
