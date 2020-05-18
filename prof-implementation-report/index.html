@@ -74,7 +74,7 @@
       </li>
     </ol>
     <p>
-      We verified the claims made by the various implementations using a test suite which is detailed in [[PROF-TESTING]]
+      We verified the claims made by the various implementations using a test suite which is detailed in [[PROF-TESTING]].
     </p>
   </section>
   <section id="exit-criteria">
@@ -125,15 +125,13 @@
       <tbody>
       <tr>
         <td><strong>I1</strong></td>
-        <td>The LocI Ontology</td>
+        <td>The Project Ontology</td>
         <td>
           <p>
-            An ontology to govern Linked Data resources published within the Loc-I project.
+            The PROJECT ontology is designed to enable publication of information describing projects, including research projects. It is not designed to support project management, though sub-activities are included. As far as possible PROJECT is intended to be domain-neutral, and it is expected that domains and applications will specialize or extend this ontology for more specific purposes.
           </p>
           <p>
-            This ontology adds further constraints to classes in the GeoSPARQL, DCAT and VoID ontologies to produce
-            classes of its own. It also provides constraint language (Shapes) files which can be used to validate data
-            claiming conformance to the Loci Ontology.
+            This ontology profiles [[PROV-O]].
           </p>
           <p>
             <em>
@@ -143,14 +141,11 @@
           </p>
         </td>
         <td>
-          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
-          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>) &amp;
           <a href="https://orcid.org/0000-0002-3884-3420">Simon J.D Cox</a>
-          (<a href="https://www.csiro.au">CSIRO</a>) via the
-          <a href="http://www.linked.data.gov.au">Australian Government Linked Data Working Group</a>
+          (<a href="https://www.csiro.au">CSIRO</a>)
         </td>
         <td>
-          <a href="http://linked.data.gov.au/def/loci">http://linked.data.gov.au/def/loci</a>
+          <a href="http://linked.data.gov.au/def/project">http://linked.data.gov.au/def/project</a>
         </td>
       </tr>
       <tr>
@@ -195,6 +190,27 @@
       </tr>
       <tr>
         <td><strong>I4</strong></td>
+        <td>Plant Health Surveillance Ontology</td>
+        <td>
+          <p>An ontology about surveillance to determine plant health, such as fruit fly trapping.</p>
+          <p>
+            <em>
+              This ontology's relationships to the things that it profiles and the relationships between its parts are described using PROF.
+            </em>
+          </p>
+        </td>
+        <td>
+          Stephen J. Pratt <a href="https://www.awe.gov.au">Australian Department of Agriculture, Water &amp the Environment</a>
+          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a> &amp;
+          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
+        </td>
+        <td>
+          <a href="http://linked.data.gov.au/def/phs">http://linked.data.gov.au/def/phs</a><br />
+          Profiles ontology <em>view</em>: <a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>I5</strong></td>
         <td>Cheka</td>
         <td>
           <p>A profile hierarchy-based RDF graph validation tool written in Python.</p>
@@ -217,7 +233,7 @@
         </td>
       </tr>
       <tr>
-        <td><strong>I5</strong></td>
+        <td><strong>I6</strong></td>
         <td>W3ID Profiles Catalogue</td>
         <td>
           <p>A cataologue of profiles using the W3ID persistent URI namespace.</p>
@@ -243,28 +259,358 @@
       </tbody>
     </table>
     <div class="note">
-      It is a requirement for W3C implementations to be <em>independent</em> thus the implementations above by the same implementors are counted as a single implementation. Therefore, the independent implementation groups above are: (1) I1, I4 & I5 (Nicholas Car and others), (2) I2 (ODRL Community Group) &amp; (3) I3 (Open Geospatial Consortium)
+      <p>It is a requirement for W3C implementations to be <em>independent</em>, thus the implementations above by the same implementors are counted as a single implementation. Therefore, the independent implementation groups above are:</p>
+      <ol>
+        <li>I1 - Simon Cox, CSIRO</li>
+        <li>I2 - ODRL Community Group</li>
+        <li>I3 - Open Geospatial Consortium</li>
+        <li>I4, I5 &amp; I6 - Nicholas Car, SURROUND Australia Pty Ltd &amp; DXWD and others</li>
+      </ol>
     </div>
   </section>
   <section id="claims-per-instruction">
     <h3>Implementation claims per Vocabulary Element</h3>
+    <p>This section records the instances of each PROF element's use per implementation.</p>
     <table id="table-element-implementations" class="simple">
       <caption><strong>Table 2:</strong> Implementations of PROF per element</caption>
       <thead>
       <tr>
         <th>Element</th>
-        <th>Label</th>
         <th>Implementer(s)</th>
         <th>Location online</th>
+        <th>Notes</th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td><strong>xx</strong></td>
-        <td>xx</td>
-        <td><a href="xx">xx</a></td>
-        <td><a href="xx">xx</a></td>
-      </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Class:Profile">Class: Profile</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L21">I1's profile declaration, Line 21</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1:Profile</code></a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td>I1, I3 &amp; I4 are straightforward instance uses of <code>prof:Profile</code>, I2 is the demonstrated use of <code>prof:Profile</code> within an example, exhorting creators of profiles of [[ODRL-VOCAB]] to use it in their instances.</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Property: hasResource</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L62">I1's profile declaration, Line 62</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's example of "The ODRL Core Profile Version 2.2" as a <code>dct:Standard</code></a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Property: isProfileOf</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L72">I1's profile declaration, Line 72</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1:Profile</code></a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isTransitiveProfileOf">Property: isTransitiveProfileOf</a></strong></td>
+          <td>
+            <ul>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:hasToken">Property: hasToken</a></strong></td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Class:ResourceDescriptor">Class: ResourceDescriptor</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L53">I1's profile declaration, Line 53</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1:ProfileSpec-html</code></a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td>The <code>ResourceDescriptor</code> use by I4 is inferred from the domain entailment of the property <code>prof:hasResource</code>.</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Property: hasArtifact</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L54">I1's profile declaration, Line 54</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, multiple uses</a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:conformsTo">Property: dct:conformsTo</a></strong></td>
+          <td>
+            <ul>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, multiple uses</a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td>The PHS Ontology Profile in I4 itself conforms to the <a href="http://linked.data.gov.au/def/agop">Australian Government's Ontology Profile (AGOP)</a> which it indicates with <code>dct:conformsTo</code>.</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:format">Property: dct:format</a></strong></td>
+          <td>
+            <ul>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, multiple uses</a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Property: hasRole</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L55">I1's profile declaration, Line 55</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, two examples</a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a>, three examples</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isInheritedFrom">Property: isInheritedFrom</a></strong></td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#Class:ResourceRole">Class: ResourceRole</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+              <li>I3</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L21">I1's profile declaration, 3 instances</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, 4 instances</a></li>
+              <li style="background-color:red">Rob</li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a>, 3 instances</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <th colspan="4" style="text-align:center;"><strong><a href="https://www.w3.org/TR/dx-prof/#resource-roles-vocab">Resource Role class instances</a></strong></th>
+        </tr>
+        <tr>
+          <th>Element</th>
+          <th>Implementer(s)</th>
+          <th>Location online</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:constraints">ResourceRole: Constraints</a></strong></td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:example">ResourceRole: Example</a></strong></td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I1</li>
+            </ul>
+          </td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L21">I1's profile declaration</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:guidance">ResourceRole: Guidance</a></strong></td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1</code></a></li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:mapping">ResourceRole: Mapping</a></strong></td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td style="background-color:red;">
+            &nbsp;
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:schema">ResourceRole: Schema</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L21">I1's profile declaration</a></li>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:specification">ResourceRole: Specification</a></strong></td>
+          <td>
+            <ul>
+              <li>I1</li>
+              <li>I2</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><a href="https://github.com/dr-shorthair/project-ont/blob/gh-pages/rdf/project.ttl#L21">I1's profile declaration</a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1</code></a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:validation">ResourceRole: Validation</a></strong></td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I4</li>
+            </ul>
+          </td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:vocabulary">ResourceRole: Vocabulary</a></strong></td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I2</li>
+            </ul>
+          </td>
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1</code></a></li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
   </section>

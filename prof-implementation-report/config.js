@@ -36,5 +36,15 @@ var respecConfig = {
             date: " 2019-04-24",
             status: "W3C Editor's Draft"
         },
+        "PROF-TESTING": {
+            authors: [
+                "Nicholas J. Car",
+                "Rob Atkinson"
+            ],
+            href: "https://w3c.github.io/dx-prof/testsuite/",
+            title: "The Profiles Vocabulary - Test Suite",
+            date: " 2020-05-18",
+            status: "W3C Internal Document"
+        }
     }
 };
