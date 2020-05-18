@@ -232,7 +232,7 @@
           <a href="https://github.com/surroundaustralia/cheka">https://github.com/surroundaustralia/cheka</a>
         </td>
       </tr>
-      <tr>
+      <tr style="background-color:palegoldenrod;">
         <td><strong>I6</strong></td>
         <td>W3ID Profiles Catalogue</td>
         <td>
@@ -310,6 +310,7 @@
               <li>I2</li>
               <li>I3</li>
               <li>I4</li>
+              <li>I5</li>
             </ul>
           </td>
           <td>
@@ -318,9 +319,10 @@
               <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's example of "The ODRL Core Profile Version 2.2" as a <code>dct:Standard</code></a></li>
               <li style="background-color:red">Rob</li>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+              <li><a href="https://github.com/surroundaustralia/cheka/blob/master/cheka/cheka.py#L56">Cheka source code, Line 56</a></li>
             </ul>
           </td>
-          <td></td>
+          <td>>I5's use is within a SPARQL query looks for resources from a profiles, possibly within a hierarchy, via this property.</td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Property: isProfileOf</a></strong></td>
@@ -330,6 +332,7 @@
               <li>I2</li>
               <li>I3</li>
               <li>I4</li>
+              <li>I5</li>
             </ul>
           </td>
           <td>
@@ -338,9 +341,10 @@
               <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1:Profile</code></a></li>
               <li style="background-color:red">Rob</li>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+              <li><a href="https://github.com/surroundaustralia/cheka/blob/master/cheka/cheka.py#L55">Cheka source code, Line 55</a></li>
             </ul>
           </td>
-          <td></td>
+          <td>I5's use is as SPARQL query that follows <code>prof:isProfileOf</code> path chains</td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isTransitiveProfileOf">Property: isTransitiveProfileOf</a></strong></td>
@@ -396,6 +400,7 @@
               <li>I2</li>
               <li>I3</li>
               <li>I4</li>
+              <li>I5</li>
             </ul>
           </td>
           <td>
@@ -404,9 +409,10 @@
               <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, multiple uses</a></li>
               <li style="background-color:red">Rob</li>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+              <li><a href="https://github.com/surroundaustralia/cheka/blob/master/cheka/cheka.py#L55">Cheka source code, Line 55</a></li>
             </ul>
           </td>
-          <td></td>
+          <td>I5's SPARQL query looks for validation files stored either locally, within a profiles repository, or remotely.</td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:conformsTo">Property: dct:conformsTo</a></strong></td>
@@ -452,6 +458,7 @@
               <li>I2</li>
               <li>I3</li>
               <li>I4</li>
+              <li>I5</li>
             </ul>
           </td>
           <td>
@@ -460,9 +467,10 @@
               <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template, two examples</a></li>
               <li style="background-color:red">Rob</li>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a>, three examples</li>
+              <li><a href="https://github.com/surroundaustralia/cheka/blob/master/cheka/cheka.py#L57">Cheka source code, Line 57</a></li>
             </ul>
           </td>
-          <td></td>
+          <td>I5's use is as a SPARQL query that looks to find <code>prof:ResourceDescriptor</code> instances with the <em>role</em> of <code>role:validation</code></td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:isInheritedFrom">Property: isInheritedFrom</a></strong></td>
@@ -588,14 +596,19 @@
           <td style="background-color:palegoldenrod;">
             <ul>
               <li>I4</li>
+              <li>I5</li>
             </ul>
           </td>
           <td style="background-color:palegoldenrod;">
             <ul>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+              <li><a href="https://github.com/surroundaustralia/cheka/blob/master/cheka/cheka.py#L55">Cheka source code, Line 55</a></li>
             </ul>
           </td>
-          <td></td>
+          <td>
+            <p style="background-color:palegoldenrod;">Implementations not independent.</p>
+            <p>I5's use is as SPARQL query that looks to find profile resources with the role of <code>role:validation</code>.</p>
+          </td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#ResourceRole:vocabulary">ResourceRole: Vocabulary</a></strong></td>
@@ -606,7 +619,7 @@
           </td>
           <td style="background-color:palegoldenrod;">
             <ul>
-              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1</code></a></li>
+              <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template</a></li>
             </ul>
           </td>
           <td></td>
