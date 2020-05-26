@@ -236,10 +236,34 @@
         <td><strong>I6</strong></td>
         <td>W3ID Profiles Catalogue</td>
         <td>
-          <p>A cataologue of profiles using the W3ID persistent URI namespace.</p>
+          <p>A catalogue of profiles using the W3ID persistent URI namespace.</p>
           <p>
             <em>
               There are multiple PROF profiles listed in this catalogue whose purpose is to deliver their content online and to allocate each of them a persistent URI.
+            </em>
+          </p>
+        </td>
+        <td>
+          <a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a>
+          (<a href="https://ssurroundaustralia.com">SURROUND Australia Pty Ltd</a>)
+        </td>
+        <td>
+          <p>
+            <a href="https://w3id.org/profile/">https://w3id.org/profile/</a> (persistent URI location)
+          </p>
+          <p>
+            <a href="https://github.com/nicholascar/w3id-profiles-catalogue">https://github.com/nicholascar/w3id-profiles-catalogue</a> (repository of content)
+          </p>
+        </td>
+      </tr>
+      <tr style="background-color:palegoldenrod;">
+        <td><strong>I7</strong></td>
+        <td>Geological Survey of Queensland's Geological Features API</td>
+        <td>
+          <p>An API delivering multiple information representations of the geological features of Queensland according to the [[DX-PROF-CONNEG]] specification.</p>
+          <p>
+            <em>
+              This system lists the profiles according to which representations of resource may be requested. It uses [[DX-PROF-CONNEG]]'s </em>Alternate Representations Data Model<em> to communicate profile information in an </em>Alternate Profiles<em> listing for a resource. This data model uses some PROF elements, such as <code>prof:token</code>.
             </em>
           </p>
         </td>
@@ -264,7 +288,7 @@
         <li>I1 - Simon Cox, CSIRO</li>
         <li>I2 - ODRL Community Group</li>
         <li>I3 - Open Geospatial Consortium</li>
-        <li>I4, I5 &amp; I6 - Nicholas Car, SURROUND Australia Pty Ltd &amp; DXWD and others</li>
+        <li>I4, I5, I6 &amp; I7 - Nicholas Car, SURROUND Australia Pty Ltd &amp; DXWD and others</li>
       </ol>
     </div>
   </section>
@@ -290,6 +314,7 @@
               <li>I2</li>
               <li>I3</li>
               <li>I4</li>
+              <li>I7</li>
             </ul>
           </td>
           <td>
@@ -298,6 +323,7 @@
               <li><a href="https://w3c.github.io/odrl/profile-bp/#profilevocab">I2's profile template <code>exprof1:Profile</code></a></li>
               <li style="background-color:red">Rob</li>
               <li><a href="http://linked.data.gov.au/def/phs?_profile=prof">http://linked.data.gov.au/def/phs?_profile=prof</a></li>
+              <li><a href="https://gsq.cat/qldgeofeatures/feature/MillungeraBasin?_profile=alt">Millungera Basin's Alternat Profiles listing</a></li>
             </ul>
           </td>
           <td>I1, I3 &amp; I4 are straightforward instance uses of <code>prof:Profile</code>, I2 is the demonstrated use of <code>prof:Profile</code> within an example, exhorting creators of profiles of [[ODRL-VOCAB]] to use it in their instances.</td>
@@ -364,13 +390,17 @@
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Property:hasToken">Property: hasToken</a></strong></td>
-          <td style="background-color:red;">
-            &nbsp;
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I7</li>
+            </ul>
           </td>
-          <td style="background-color:red;">
-            &nbsp;
+          <td style="background-color:palegoldenrod;">
+            <ul>
+              <li>I7's <em>Alternate Profiles</em> listing for any resource, <a href="https://gsq.cat/qldgeofeatures/feature/MillungeraBasin?_profile=alt">e.g. for the Millungera Basin</a>.</li>
+            </ul>&nbsp;
           </td>
-          <td></td>
+          <td>The <em>Alternate Profiles</em> listing indicates a number of <code>prof:Profile</code> instances which representations of the resource conform to. Those representations may be indicated within the API using <code>xsd:token</code>s and the link between the profile description and the token to be used is indicated by <code>prof:hastoken</code>.</td>
         </tr>
         <tr>
           <td><strong><a href="https://www.w3.org/TR/dx-prof/#Class:ResourceDescriptor">Class: ResourceDescriptor</a></strong></td>
