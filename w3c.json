@@ -1,8 +1,8 @@
 {
-  "group": 99375,
+  "group": "wg/dx",
   "contacts": [
     "plehegar"
   ],
   "policy": "open",
-  "repo-type": "rec-track"
+  "repo-type": "note"
 }
