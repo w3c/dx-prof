@@ -1,0 +1,51 @@
+PREFIX : <http://www.w3.org/ns/dx/prof/validator/>
+PREFIX ont: <http://www.w3.org/ns/dx/prof/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ont:
+    a owl:Ontology ;
+    schema:name "DX Profiles Vocabulary Validator" ;
+.
+
+:ProfileDisjointFromResourceDescriptorShape
+    a sh:NodeShape ;
+    sh:message "Instances of prof:Profile must not also be instances of prof:ResourceDescriptor." ;
+    sh:not
+        [
+            sh:class prof:ResourceDescriptor ;
+        ] ;
+    sh:targetClass prof:Profile ;
+.
+
+:ResourceDescriptorDisjointFromProfileShape
+    a sh:NodeShape ;
+    sh:message "Instances of prof:ResourceDescriptor must not also be instances of prof:Profile." ;
+    sh:not
+        [
+            sh:class prof:Profile ;
+        ] ;
+    sh:targetClass prof:ResourceDescriptor ;
+.
+
+:ResourceDescriptorHasExactlyOneArtifactShape
+    a sh:NodeShape ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
+            sh:minCount 1 ;
+            sh:path prof:hasRole ;
+            sh:nodeKind sh:IRI ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
+            sh:minCount 1 ;
+            sh:path prof:hasArtifact ;
+        ] ;
+    sh:targetClass prof:ResourceDescriptor ;
+.
