@@ -19,7 +19,7 @@
     dct:creator [
         sdo:name "Nicholas J. Car" ;
         sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-        sdo:email <nicholas.car@surroundaustralia.com> ;
+        sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
         sdo:affiliation [
         sdo:name "SURROUND Australia Pty Ltd" ;
         sdo:url <https://surroundaustralia.com> ;
@@ -28,7 +28,7 @@
     [
         sdo:name "Rob Atkinson" ;
         sdo:identifier <http://orcid.org/0000-0002-7878-2693> ;
-        sdo:email <rob@metalinkage.com.au> ;
+        sdo:email <mailto:rob@metalinkage.com.au> ;
         sdo:affiliation [
             sdo:name "Open Geospatial Consortium" ;
             sdo:url <https://www.opengeospatial.org/> ;
