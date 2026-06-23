@@ -13,9 +13,9 @@ var respecConfig = {
       },
       {
         name:       "Nicholas J. Car",
-        mailto:     "nicholas.car@surroundaustralia.com",
-        company:    "SURROUND Australia Pty Ltd and before CSIRO",
-        companyURL: "https://surroundaustralia.com",
+        mailto:     "nick@kurrawong.ai",
+        company:    "KurrawongAI",
+        companyURL: "https://kurrawong.ai",
         orcid:      "0000-0002-8742-7730",
         w3cid:      70131
     }],
