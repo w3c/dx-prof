@@ -16,22 +16,19 @@
                                 dct:creator [
                                     sdo:name "Nicholas J. Car" ;
                                     sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-                                    sdo:email <nicholas.car@surroundaustralia.com> ;
+                                    sdo:email <mailto:nick@kurrawong.ai> ;
                                     sdo:affiliation [
-                                        sdo:name "SURROUND Australia Pty Ltd" ;
-                                        sdo:url <https://surroundaustralia.com> ;
+                                        sdo:name "KurrawongAI" ;
+                                        sdo:url <https://kurrawong.ai> ;
                                     ] ;
                                 ] ,
                                 [
                                     sdo:name "Rob Atkinson" ;
                                     sdo:identifier <http://orcid.org/0000-0002-7878-2693> ;
-                                    sdo:email <rob@metalinkage.com.au> ;
+                                    sdo:email <ratkinson@ogc.org> ;
                                     sdo:affiliation [
                                         sdo:name "Open Geospatial Consortium" ;
                                         sdo:url <https://www.opengeospatial.org/> ;
-                                    ] ,
-                                    [
-                                        sdo:name "Metalinkage" ;
                                     ] ;
                                 ] ;
                               rdfs:comment """This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
@@ -42,7 +39,7 @@ This model starts with [http://dublincore.org/2012/06/14/dcterms#Standard](dct:S
                                              "Simon Cox" ,
                                              "Alejandra Gonzalez-Beltran" ,
                                              "Makx Dekkers" ;
-                              dct:modified "2019-10-25"^^xsd:date ;
+                              dct:modified "2026-06-24"^^xsd:date ;
                               dct:created "2018-02-16"^^xsd:date .
 
 #################################################################
@@ -140,6 +137,7 @@ dct:format rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/ns/dx/prof/ResourceDescriptor
 :ResourceDescriptor rdf:type owl:Class ;
+                  owl:disjointWith :Profile ;
                   rdfs:label "Resource Descriptor"@en ;
                   skos:definition "A description of a resource that defines an aspect - a particular part, feature or role - of a Profile"@en ;
                   skos:usageNote "Can be use to indicate the formalism (via dct:format) and any adherence to a dct:Standard (via dct:conformsTo) to allow for machine mediation as well as its purpose via relation to a ResourceRole (via hasRole)"@en .
@@ -156,6 +154,7 @@ dct:format rdf:type owl:AnnotationProperty ;
 ###  http://www.w3.org/ns/dx/prof/Profile
 :Profile rdf:type owl:Class ;
          rdfs:subClassOf dct:Standard ;
+         owl:disjointWith :ResourceDescriptor ;
          dct:source <https://www.w3.org/2017/dxwg/wiki/ProfileContext> ;
          rdfs:label "Profile" ;
          skos:definition """A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
