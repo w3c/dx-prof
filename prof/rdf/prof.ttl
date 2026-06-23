@@ -140,7 +140,17 @@ dct:format rdf:type owl:AnnotationProperty ;
                   owl:disjointWith :Profile ;
                   rdfs:label "Resource Descriptor"@en ;
                   skos:definition "A description of a resource that defines an aspect - a particular part, feature or role - of a Profile"@en ;
-                  skos:usageNote "Can be use to indicate the formalism (via dct:format) and any adherence to a dct:Standard (via dct:conformsTo) to allow for machine mediation as well as its purpose via relation to a ResourceRole (via hasRole)"@en .
+                  skos:usageNote "Can be use to indicate the formalism (via dct:format) and any adherence to a dct:Standard (via dct:conformsTo) to allow for machine mediation as well as its purpose via relation to a ResourceRole (via hasRole)"@en ;
+                  rdfs:subClassOf [
+                    a owl:Restriction ;
+                    owl:onProperty :hasRole ;
+                    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                  ] ;
+                  rdfs:subClassOf [
+                    a owl:Restriction ;
+                    owl:onProperty :hasArtifact ;
+                    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                  ] .
 
 
 ###  http://www.w3.org/ns/dx/prof/ResourceRole
