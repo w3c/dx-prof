@@ -14,10 +14,20 @@ var respecConfig = {
         w3cid:      70131
       },
       {
-        name: "Rob Atkinson",
-        company: "Metalinkage, Open Geospatial Consortium",
+        name:       "Rob Atkinson",
+        mailto:     "ratkinson@ogc.org",
+        company:    "Open Geospatial Consortium",
         companyURL: "http://www.opengeospatial.org/",
-        orcid: "0000-0002-7878-2693"
+        orcid:      "0000-0002-7878-2693",
+        w3cid:      93930
+      },
+      {
+        name:       "Les Kneebone",
+        mailto:     "les@kurrawong.ai",
+        company:    "KurrawongAI",
+        companyURL: "https://kurrawong.ai",
+        orcid:      "0000-0001-5640-3202",
+        w3cid:      93930
       }
     ],
     group: "wg/dx",
