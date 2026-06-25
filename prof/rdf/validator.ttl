@@ -7,8 +7,9 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
-    a owl:Ontology ;
+    a sh:ShapesGraph ;
     schema:name "DX Profiles Vocabulary Validator" ;
+    schema:description "A minimal validator for Profiles Vocabulary profile definitions" ;
 .
 
 :ProfileDisjointFromResourceDescriptorShape
