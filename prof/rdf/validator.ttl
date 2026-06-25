@@ -21,16 +21,6 @@ ont:
     sh:targetClass prof:Profile ;
 .
 
-:ResourceDescriptorDisjointFromProfileShape
-    a sh:NodeShape ;
-    sh:message "Instances of prof:ResourceDescriptor must not also be instances of prof:Profile." ;
-    sh:not
-        [
-            sh:class prof:Profile ;
-        ] ;
-    sh:targetClass prof:ResourceDescriptor ;
-.
-
 :ResourceDescriptorHasExactlyOneArtifactShape
     a sh:NodeShape ;
     sh:property
