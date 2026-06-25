@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <http://www.w3.org/ns/dx/prof> .
@@ -14,21 +14,21 @@
                                 rdfs:label "Profiles Vocabulary" ;
                                 dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
                                 dct:creator [
-                                    sdo:name "Nicholas J. Car" ;
-                                    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-                                    sdo:email <mailto:nick@kurrawong.ai> ;
-                                    sdo:affiliation [
-                                        sdo:name "KurrawongAI" ;
-                                        sdo:url <https://kurrawong.ai> ;
+                                    schema:name "Nicholas J. Car" ;
+                                    schema:identifier <http://orcid.org/0000-0002-8742-7730> ;
+                                    schema:email <mailto:nick@kurrawong.ai> ;
+                                    schema:affiliation [
+                                        schema:name "KurrawongAI" ;
+                                        schema:url <https://kurrawong.ai> ;
                                     ] ;
                                 ] ,
                                 [
-                                    sdo:name "Rob Atkinson" ;
-                                    sdo:identifier <http://orcid.org/0000-0002-7878-2693> ;
-                                    sdo:email <ratkinson@ogc.org> ;
-                                    sdo:affiliation [
-                                        sdo:name "Open Geospatial Consortium" ;
-                                        sdo:url <https://www.opengeospatial.org/> ;
+                                    schema:name "Rob Atkinson" ;
+                                    schema:identifier <http://orcid.org/0000-0002-7878-2693> ;
+                                    schema:email <mailto:ratkinson@ogc.org> ;
+                                    schema:affiliation [
+                                        schema:name "Open Geospatial Consortium" ;
+                                        schema:url <https://www.opengeospatial.org/> ;
                                     ] ;
                                 ] ;
                               rdfs:comment """This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
