@@ -1,12 +1,13 @@
 PREFIX : <http://www.w3.org/ns/dx/prof/validator/>
-PREFIX ont: <http://www.w3.org/ns/dx/prof/validator>
+PREFIX sg: <http://www.w3.org/ns/dx/prof/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ont:
+sg:
     a sh:ShapesGraph ;
     schema:name "DX Profiles Vocabulary Validator" ;
     schema:description "A minimal validator for Profiles Vocabulary profile definitions" ;
@@ -14,29 +15,49 @@ ont:
 
 :ProfileDisjointFromResourceDescriptorShape
     a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    schema:name "Profile Disjoint From Resource Descriptor Shape" ;
     sh:message "Instances of prof:Profile must not also be instances of prof:ResourceDescriptor." ;
     sh:not
         [
             sh:class prof:ResourceDescriptor ;
         ] ;
     sh:targetClass prof:Profile ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    sh:message "Profile and Resource Descriptor classes are disjoint" ;
 .
 
-:ResourceDescriptorHasExactlyOneArtifactShape
+:ResourceDescriptorRequiredPropertiesShape
     a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
     sh:property
-        [
-            sh:maxCount 1 ;
-            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
-            sh:minCount 1 ;
-            sh:path prof:hasRole ;
-            sh:nodeKind sh:IRI ;
-        ] ,
-        [
-            sh:maxCount 1 ;
-            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
-            sh:minCount 1 ;
-            sh:path prof:hasArtifact ;
-        ] ;
+        :hasRoleExists ,
+        :hasArtifactExists ;
     sh:targetClass prof:ResourceDescriptor ;
+    schema:name "Resource Descriptor Required Properties Shape" ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    sh:message "The Resource Descriptor does not have all the necessary properties" ;
+.
+
+:hasRoleExists
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
+    sh:minCount 1 ;
+    sh:path prof:hasRole ;
+    sh:nodeKind sh:IRI ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "has Role Exists Shape" ;
+.
+
+:hasArtifactExists
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
+    sh:minCount 1 ;
+    sh:path prof:hasArtifact ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "has Artifact Exists Shape" ;
 .
