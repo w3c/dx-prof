@@ -1,0 +1,15 @@
+# ex:profile-a's ResourceDescriptor has no hasRole predicate
+
+PREFIX ex: <http://example.com/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:profile-a
+    a prof:Profile ;
+    prof:hasResource [
+        a prof:ResourceDescriptor ;
+        prof:hasArtifact ex:dummy-vocab ;
+    ] ;
+.

@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <http://www.w3.org/ns/dx/prof> .
@@ -14,24 +14,21 @@
                                 rdfs:label "Profiles Vocabulary" ;
                                 dct:contributor <http://orcid.org/0000-0002-8742-7730> ;
                                 dct:creator [
-                                    sdo:name "Nicholas J. Car" ;
-                                    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-                                    sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-                                    sdo:affiliation [
-                                        sdo:name "SURROUND Australia Pty Ltd" ;
-                                        sdo:url <https://surroundaustralia.com> ;
+                                    schema:name "Nicholas J. Car" ;
+                                    schema:identifier <http://orcid.org/0000-0002-8742-7730> ;
+                                    schema:email <mailto:nick@kurrawong.ai> ;
+                                    schema:affiliation [
+                                        schema:name "KurrawongAI" ;
+                                        schema:url <https://kurrawong.ai> ;
                                     ] ;
                                 ] ,
                                 [
-                                    sdo:name "Rob Atkinson" ;
-                                    sdo:identifier <http://orcid.org/0000-0002-7878-2693> ;
-                                    sdo:email <mailto:rob@metalinkage.com.au> ;
-                                    sdo:affiliation [
-                                        sdo:name "Open Geospatial Consortium" ;
-                                        sdo:url <https://www.opengeospatial.org/> ;
-                                    ] ,
-                                    [
-                                        sdo:name "Metalinkage" ;
+                                    schema:name "Rob Atkinson" ;
+                                    schema:identifier <http://orcid.org/0000-0002-7878-2693> ;
+                                    schema:email <mailto:ratkinson@ogc.org> ;
+                                    schema:affiliation [
+                                        schema:name "Open Geospatial Consortium" ;
+                                        schema:url <https://www.opengeospatial.org/> ;
                                     ] ;
                                 ] ;
                               rdfs:comment """This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
@@ -42,7 +39,7 @@ This model starts with [http://dublincore.org/2012/06/14/dcterms#Standard](dct:S
                                              "Simon Cox" ,
                                              "Alejandra Gonzalez-Beltran" ,
                                              "Makx Dekkers" ;
-                              dct:modified "2019-10-25"^^xsd:date ;
+                              dct:modified "2026-06-24"^^xsd:date ;
                               dct:created "2018-02-16"^^xsd:date .
 
 #################################################################
@@ -140,9 +137,20 @@ dct:format rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/ns/dx/prof/ResourceDescriptor
 :ResourceDescriptor rdf:type owl:Class ;
+                  owl:disjointWith :Profile ;
                   rdfs:label "Resource Descriptor"@en ;
                   skos:definition "A description of a resource that defines an aspect - a particular part, feature or role - of a Profile"@en ;
-                  skos:usageNote "Can be use to indicate the formalism (via dct:format) and any adherence to a dct:Standard (via dct:conformsTo) to allow for machine mediation as well as its purpose via relation to a ResourceRole (via hasRole)"@en .
+                  skos:usageNote "Can be use to indicate the formalism (via dct:format) and any adherence to a dct:Standard (via dct:conformsTo) to allow for machine mediation as well as its purpose via relation to a ResourceRole (via hasRole)"@en ;
+                  rdfs:subClassOf [
+                    a owl:Restriction ;
+                    owl:onProperty :hasRole ;
+                    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                  ] ;
+                  rdfs:subClassOf [
+                    a owl:Restriction ;
+                    owl:onProperty :hasArtifact ;
+                    owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                  ] .
 
 
 ###  http://www.w3.org/ns/dx/prof/ResourceRole
@@ -156,6 +164,7 @@ dct:format rdf:type owl:AnnotationProperty ;
 ###  http://www.w3.org/ns/dx/prof/Profile
 :Profile rdf:type owl:Class ;
          rdfs:subClassOf dct:Standard ;
+         owl:disjointWith :ResourceDescriptor ;
          dct:source <https://www.w3.org/2017/dxwg/wiki/ProfileContext> ;
          rdfs:label "Profile" ;
          skos:definition """A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
