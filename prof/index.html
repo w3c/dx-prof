@@ -12,8 +12,8 @@
   <p>
     The Profiles Vocabulary is an RDF vocabulary created to allow the machine-readable description of profiles of
     specifications for information resources. It can be used to describe profile hierarchies wherein profiles of
-    specifications may themselves have profiles indicated. It can also link multiple profile resources that make up a profile
-    - guidelines, validation tools, schemas, term lists and so on - to it and allows for those profile resources to be
+    specifications may themselves have profiles indicated. It can also be used to link together multiple profile resources that make up a profile
+    - guidelines, validation tools, schemas, term lists and so on - and it allows for those profile resources to be
     described with formats, roles, and digital artifacts.
   </p>
   <p style="text-align: center;">
@@ -70,7 +70,7 @@
 	</p>
   <p>
     Data that conforms to a profile, in PROF, must conform to anything the profile is a profile of. To represent this formally, this vocabulary
-    includes the property chain axiom <code>dct:conformsTo owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo )</code>.
+    includes the property chain axiom <code>dct:conformsTo owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )</code>.
     Individual communities may define what conformance to their profiles and the things they profile means and how to
     test for conformance if indeed they wish to.
   </p>
@@ -310,7 +310,7 @@
     </p>
     <p>
       Within OWL, the definition of <code>owl:imports</code> is not associated with any axioms that permit reasoning with
-      it and it is mostly used by ontology editing software to
+      it, and it is mostly used by ontology editing software to
       manipulate ontology data by importing it from remote (online) locations, as a technical convenience mechanism.
       Since an ontology that imports another includes all the axioms of the imported ontology, data which conforms to an
       ontology <em>x</em> will necessarily conform to any ontology that <em>x</em> imports too.
@@ -636,7 +636,7 @@ CSIRO's publications catalogue."""@en ;
       dct:conformsTo &lt;http://example.org/profile/x> .
 
 # Due to the property chain axiom:
-# dct:conformsTo owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo )
+# dct:conformsTo owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )
 # the data resource above can be inferred to conform to Specification Y
 &lt;http://example.org/resource/a>
       <strong>dct:conformsTo &lt;http://example.org/specification/y></strong> .  # this triple is inferred
@@ -924,7 +924,7 @@ CSIRO's publications catalogue."""@en ;
           <tr><td class="prop">Label:</td><td>Conforms To</td></tr>
           <tr><td class="prop">Definition:</td><td>An established standard to which the described resource conforms</td></tr>
           <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-relation">dct:relation</a></td></tr>
-          <tr><td class="prop">Property Chain Axiom:</td><td><code>owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo )</code></td></tr>
+          <tr><td class="prop">Property Chain Axiom:</td><td><code>owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )</code></td></tr>
           <tr>
             <td class="prop">Usage note:</td>
             <td>
@@ -2011,7 +2011,7 @@ _:4
           <li><code><a href="#Property:hasArtifact">prof:hasArtifact</a></code></li>
           <li>
             <code><a href="#Property:conformsTo">dct:conformsTo</a></code></li>
-            <li><code><a href="#Property:conformsTo">dct:conformsTo</a></code>'s axiom: <code>dct:conformsTo owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo )</code></li>
+            <li><code><a href="#Property:conformsTo">dct:conformsTo</a></code>'s axiom: <code>dct:conformsTo owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )</code></li>
           <li><code><a href="#Property:format">dct:format</a></code></li>
           <li><code><a href="#Property:hasRole">prof:hasRole</a></code></li>
           <li><code><a href="#Property:isInheritedFrom">prof:isInheritedFrom</a></code></li>
@@ -2046,6 +2046,6 @@ _:4
   </section>
 </section>
 <script class="remove" src="config.js"></script>
-<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c"></script>
 </body>
 </html>

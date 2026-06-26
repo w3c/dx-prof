@@ -1,41 +1,51 @@
 var respecConfig = {
-    specStatus: "WG-NOTE",
+    specStatus: "ED",
     shortName: "dx-prof",
     edDraftURI: "https://w3c.github.io/dx-prof/prof/",
-    prevRecURI: "https://www.w3.org/TR/2019/WD-dx-prof-20190402/",
+    prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
     canonicalURI: "TR",
     editors: [
       {
-        name: "Rob Atkinson",
-        company: "Metalinkage, Open Geospatial Consortium",
-        companyURL: "http://www.opengeospatial.org/",
-        orcid: "0000-0002-7878-2693"
-      },
-      {
         name:       "Nicholas J. Car",
-        mailto:     "nicholas.car@surroundaustralia.com",
-        company:    "SURROUND Australia Pty Ltd and before CSIRO",
-        companyURL: "https://surroundaustralia.com",
+        mailto:     "nick@kurrawong.ai",
+        company:    "KurrawongAI",
+        companyURL: "https://kurrawong.ai",
         orcid:      "0000-0002-8742-7730",
         w3cid:      70131
+      },
+      {
+        name:       "Rob Atkinson",
+        mailto:     "ratkinson@ogc.org",
+        company:    "Open Geospatial Consortium",
+        companyURL: "http://www.opengeospatial.org/",
+        orcid:      "0000-0002-7878-2693",
+      },
+      {
+        name:       "Les Kneebone",
+        mailto:     "les@kurrawong.ai",
+        company:    "KurrawongAI",
+        companyURL: "https://kurrawong.ai",
+        orcid:      "0000-0001-5640-3202",
+        w3cid:      93930
       },
       {
         name: "Yousouf Taghzouti",
         company: "Inria",
         companyURL: "https://www.inria.fr/",
         mailto: "yousouf.taghzouti@inria.fr",
-        w3cid: 143054,
-        orcid: "0000-0003-4509-9537"
+        orcid: "0000-0003-4509-9537",
+        w3cid: 143054
       }
     ],
+    group: "wg/dx",
     wg: "Dataset Exchange Working Group",
-    wgURI: "https://www.w3.org/2017/dxwg/",
+    wgURI: "https://www.w3.org/groups/wg/dx/",
     wgPublicList: "public-dxwg-comments",
     wgPatentURI: "https://www.w3.org/2004/01/pp-impl/99375/status",
     inlineCSS: "true",
-    lint: "false",
+    lint: {"no-unused-dfns": false},
     issueBase: "https://github.com/w3c/dx-prof/issues/",
-    github:    "https://github.com/w3c/dx-prof/",
+    github:    "w3c/dx-prof/",
     localBiblio: {
         PDF: {
             href: "https://www.iso.org/standard/51502.html",
