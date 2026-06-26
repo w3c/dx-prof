@@ -18,7 +18,16 @@ var respecConfig = {
         companyURL: "https://surroundaustralia.com",
         orcid:      "0000-0002-8742-7730",
         w3cid:      70131
-    }],
+      },
+      {
+        name: "Yousouf Taghzouti",
+        company: "Inria",
+        companyURL: "https://www.inria.fr/",
+        mailto: "yousouf.taghzouti@inria.fr",
+        w3cid: 143054,
+        orcid: "0000-0003-4509-9537"
+      }
+    ],
     wg: "Dataset Exchange Working Group",
     wgURI: "https://www.w3.org/2017/dxwg/",
     wgPublicList: "public-dxwg-comments",
@@ -49,7 +58,7 @@ var respecConfig = {
             ],
             href: "https://w3c.github.io/dxwg/profiles/",
             title: "Profile Guidance",
-            date: " 2018-12-31",
+            date: "2018-12-31",
             status: "W3C Editor's Draft"
         },
         "DX-PROF-IETF": {
