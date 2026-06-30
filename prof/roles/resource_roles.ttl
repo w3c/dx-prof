@@ -43,14 +43,13 @@
 
 This vocabulary is both a SKOS vocabulary and also a list of instances of the Profiles Vocabulary's [ResourceRole](www.w3.org/ns/dx/prof/ResourceRole) class."""@en .
 
-:catalog a owl:NamedIndividual,
+:manifest a owl:NamedIndividual,
         skos:Concept,
         prof:ResourceRole ;
     skos:definition "An aggregation resource that organizes metadata about resources relevant to a profile."@en ;
-    skos:prefLabel "Catalog"@en ;
-    skos:altLabel "Catalogue"@en ;
+    skos:prefLabel "Manifest"@en ;
     skos:topConceptOf : ;
-    skos:scopeNote "Use this Role when you want to indicate a resource that aggregates metadata about profile-relevant resources, such as schemas, specifications, validators, or vocabularies, especially where those resources are maintained externally to the profile itself. This role may be used for catalog-like resources, including but not limited to dcat:Catalog or schema:DataCatalog, and may be used alongside other roles where appropriate."@en ;
+    skos:scopeNote "Use this Role when you want to indicate a resource that aggregates metadata about profile-relevant resources, such as schemas, specifications, validators, or vocabularies, especially where those resources are maintained externally to the profile itself. This role may be used for catalog or manifest-like resources, and may be used alongside other roles where appropriate."@en ;
 .
 
 :constraints a owl:NamedIndividual,
