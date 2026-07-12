@@ -19,6 +19,7 @@ var respecConfig = {
         company:    "Open Geospatial Consortium",
         companyURL: "http://www.opengeospatial.org/",
         orcid:      "0000-0002-7878-2693",
+        w3cid:      90763
       },
       {
         name:       "Les Kneebone",

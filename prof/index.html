@@ -1945,8 +1945,8 @@ _:4
     </ul>
   </section>
 </section>
-<section id="security_and_privacy" class="informative">
-  <h2>Security and Privacy</h2>
+<section id="security" class="informative">
+  <h2>Security Considerations</h2>
   <p>
     The PROF vocabulary, when used with likely extensions such as [[DCTERMS]], supports the attribution of data and
     metadata to various participants such as data resource <a href="http://purl.org/dc/terms/creator">creators</a>,
@@ -1958,6 +1958,20 @@ _:4
     identifiers as <a href="https://www.w3.org/TR/odrl-vocab/#privacy-consideration">described</a> in [[ODRL-VOCAB]].
     Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security
     and privacy considerations are addressed at the application level.
+  </p>
+  <p>
+    For a more complete view of those issues, cf. the
+    <a href="https://www.w3.org/2017/dxwg/wiki/ProfPrivacyAndSecurityQuestionnaire">
+      Security and Privacy Questionnaire for this specification</a>.
+  </p>
+</section>
+<section id="privacy" class="informative">
+  <h2>Privacy Considerations</h2>
+  <p>
+
+    The Profile vocabulary, when used alongside extensions such as [[DCTERMS]], supports the attribution of data and metadata to various agents and participants, including <a href="http://purl.org/dc/terms/creator">creators</a> and <a href="http://purl.org/dc/terms/publisher">publishers</a>, via qualified relations. When integrated with frameworks that associate explicit  <a href="http://purl.org/dc/terms/rights">rights</a>, usage policies, and licenses with modeled Profiles and Resource Descriptors—such as [[ODRL-VOCAB]]—the underlying data graphs may incorporate or reference sensitive technical identifiers. These include, but are not limited to, distinct user and asset identifiers.
+
+    Consequently, implementations that produce, maintain, publish, or consume these vocabulary terms must enforce appropriate security controls at the application layer. System architects and developers must ensure that mechanisms governing the resolution, storage, and exchange of these identifiers guard against unauthorized access, tampering, or spoofing of profile resources and  <a href="http://purl.org/dc/terms/rights">rights</a> statements.
   </p>
   <p>
     For a more complete view of those issues, cf. the
@@ -1981,7 +1995,8 @@ _:4
       <li><a href="#conceptualmodel"></a> diagram updated, a sentence about how individual communities may interpret <code>dct:conformsTo</code> added, a second &amp; third Initial Example added</li>
       <li><a href="#specification"></a> class &amp; property definitions updated after much WG discussion, definitional phrasing aligned, some Usage Notes added, <code>dct:conformsTo</code> axiom added, diagrams updated</li>
       <li><a href="#alignments"></a> PROV alignment removed, OWL alignment still indicated incomplete with flagged Issue</li>
-      <li><a href="#security_and_privacy"></a> section completed</li>
+      <li><a href="#security"></a> split security and privacy section</li>
+      <li><a href="#privacy"></a> split security and privacy section</li>
       <li><a href="#appendices"></a> previous <em>Requirements</em> section removed as not used</li>
     </ul>
   </section>
