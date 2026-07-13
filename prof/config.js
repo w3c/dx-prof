@@ -1,7 +1,7 @@
 var respecConfig = {
-    specStatus: "ED",
+    specStatus: "FPWD",
     shortName: "dx-prof",
-    edDraftURI: "https://w3c.github.io/dx-prof/prof/",
+    edDraftURI: "https://www.w3.org/TR/2026/WD-dx-prof-2026-07-30/",
     prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
     canonicalURI: "TR",
     implementationReportURI: "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
