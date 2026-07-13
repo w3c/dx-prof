@@ -4,6 +4,7 @@ var respecConfig = {
     edDraftURI: "https://w3c.github.io/dx-prof/prof/",
     prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
     canonicalURI: "TR",
+    implementationReportURI: "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
     editors: [
       {
         name:       "Nicholas J. Car",
