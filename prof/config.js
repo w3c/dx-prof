@@ -1,9 +1,10 @@
 var respecConfig = {
-    specStatus: "ED",
+    specStatus: "FPWD",
     shortName: "dx-prof",
-    edDraftURI: "https://w3c.github.io/dx-prof/prof/",
+    edDraftURI: "https://www.w3.org/TR/2026/WD-dx-prof-20260730/",
     prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
     canonicalURI: "TR",
+    implementationReportURI: "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
     editors: [
       {
         name:       "Nicholas J. Car",
@@ -19,6 +20,7 @@ var respecConfig = {
         company:    "Open Geospatial Consortium",
         companyURL: "http://www.opengeospatial.org/",
         orcid:      "0000-0002-7878-2693",
+        w3cid:      90763
       },
       {
         name:       "Les Kneebone",
@@ -92,10 +94,10 @@ var respecConfig = {
           editors: [
             "OGC Policy SWG"
           ],
-          href: "http://www.opengeospatial.org/standards/modularspec" ,
-          title: "The Specification Model — A Standard for Modular specifications" ,
-          status: "OGC Policy Directive" ,
-          date: "2009-10-19"
+          href: "https://www.ogc.org/standards/modspec/" ,
+          title: "The ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards" ,
+          status: "Open Geospatial Consortium Implementation Standard" ,
+          date: "2026-05-21"
         },
         "CFG-MGMT": {
           authors: [

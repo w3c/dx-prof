@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"/>
 </head>
 <body class="h-entry" id="respecDocument">
 <section id="abstract">
@@ -60,12 +61,12 @@
 	</p>
   <p>
     This vocabulary's ontological basis for specification/profile relations is a specialization of the
-    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></code>
+    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code>
     class which is defined here as a <code><a href="#Class:Profile">prof:Profile</a></code>. A <code>prof:Profile</code>
     instance is related to either <code>dct:Standard</code> or <code>prof:Profile</code> instances by being a <em>profile of</em>
     them, formally, <a href="#Property:isProfileOf"><code>prof:isProfileOf</code></a>. Resources that conform to either a
     <code>dct:Standard</code> or a <code>prof:Profile</code> are formally described as doing so with the use of the
-    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></code>
+    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></code>
     predicate.
 	</p>
   <p>
@@ -127,7 +128,7 @@
         A basis for comparison; a reference point against which other things can be evaluated.
       </p>
       <p>
-        <em>Source: DCMI Metadata Terms [[DCTERMS]]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">Standard</a></code>.</em>
+        <em>Source: DCMI Metadata Terms [[DCTERMS]]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">Standard</a></code>.</em>
       </p>
     </dd>
     <dt><dfn data-lt="data specification">data specification</dfn></dt>
@@ -515,10 +516,10 @@
     This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
   </p>
   <p>
-    The model takes the <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></code> Class as a starting point and defines a specialization, a <code>Profile</code>, which is a <code>dct:Standard</code> that <em>profiles</em> a <code>dct:Standard</code> or another <code>Profile</code>. <code>Standards</code>s or <code>Profile</code>s can have <code>Resource Descriptor</code>s associated with
+    The model takes the <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code> Class as a starting point and defines a specialization, a <code>Profile</code>, which is a <code>dct:Standard</code> that <em>profiles</em> a <code>dct:Standard</code> or another <code>Profile</code>. <code>Standards</code>s or <code>Profile</code>s can have <code>Resource Descriptor</code>s associated with
   them that define rules for implementation, provide guidance on how to implement, or play some other role. <code>Resource Descriptor</code>s must indicate the role they
-  play (to guide, to validate etc.), the formalism they adhere to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-format">dct:format</a></code>)
-  and any <code>dct:Standard</code> that they themselves conform to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></code>).
+  play (to guide, to validate etc.), the formalism they adhere to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">dct:format</a></code>)
+  and any <code>dct:Standard</code> that they themselves conform to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></code>).
   </p>
   <p>
     Any <code>rdfs:Resource</code> MAY indicate conformance to a profile as per <a href="#eg-conformance-to-profile"></a>
@@ -697,7 +698,7 @@ CSIRO's publications catalogue."""@en ;
           </p>
         </td>
       </tr>
-      <tr><td class="prop">Sub class of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+      <tr><td class="prop">Sub class of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
       <tr><td class="prop">Source:</td><td><a href="https://www.w3.org/2017/dxwg/wiki/ProfileContext">https://www.w3.org/2017/dxwg/wiki/ProfileContext</a></td></tr>
       <tr><td class="prop">Usage Note:</td><td>The Profile class "may be used to model aspects of data structure and content (as per <a>profile</a>) or any other declared behaviour where a base specification can be identified and further requirements asserted.</td></tr>
       </tbody>
@@ -728,7 +729,7 @@ CSIRO's publications catalogue."""@en ;
           <tr><td class="prop">Definition:</td><td>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</td></tr>
           <tr><td class="prop">Sub property of:</td><td><a href="#Property:isTransitiveProfileOf">prof:isTransitiveProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
-          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
           <tr><td class="prop">Usage Note:</td>
             <td>
               <p>
@@ -757,7 +758,7 @@ CSIRO's publications catalogue."""@en ;
           <tr><td class="prop">Definition:</td><td>A specification this Profile conforms to</td></tr>
           <tr><td class="prop">Super property of:</td><td><a href="#Property:isProfileOf">prof:isProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
-          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
           <tr>
             <td class="prop">Usage note:</td>
             <td>
@@ -918,12 +919,12 @@ CSIRO's publications catalogue."""@en ;
       <p><em>This property is from the [[DCTERMS]] specification however the property chain axiom declared here is new in PROF.</em></p>
       <table class="definition">
         <thead>
-        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></th></tr>
+        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></th></tr>
         </thead>
         <tbody>
           <tr><td class="prop">Label:</td><td>Conforms To</td></tr>
           <tr><td class="prop">Definition:</td><td>An established standard to which the described resource conforms</td></tr>
-          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-relation">dct:relation</a></td></tr>
+          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relation">dct:relation</a></td></tr>
           <tr><td class="prop">Property Chain Axiom:</td><td><code>owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )</code></td></tr>
           <tr>
             <td class="prop">Usage note:</td>
@@ -952,12 +953,12 @@ CSIRO's publications catalogue."""@en ;
       <p><em>This property's details are from the [[DCTERMS]] specification.</em></p>
       <table class="definition">
         <thead>
-        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-format">dct:format</a></th></tr>
+        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">dct:format</a></th></tr>
         </thead>
         <tbody>
           <tr><td class="prop">Label:</td><td>Format</td></tr>
           <tr><td class="prop">Definition:</td><td>The file format, physical medium, or dimensions of the resource</td></tr>
-          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#elements-format">dc:format</a></td></tr>
+          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/format/">dc:format</a></td></tr>
         </tbody>
       </table>
     </section>
@@ -1532,6 +1533,7 @@ _:4
       <code>Constraints</code>) that are differentiated on other bases, here on format: plain text &amp; RDF (turtle).
     </p>
   </section>
+  <!-- Nick: removed as PID no longer resolving
   <section id="eg-ga">
     <h3>Geoscience Australia's Profile of ISO19115-1:2014</h3>
     <p>
@@ -1640,6 +1642,7 @@ _:4
 .
     </pre>
   </section>
+  -->
   <section id="eg-adms">
     <h3>Asset Description Metadata Schema</h3>
     <p>
@@ -1727,17 +1730,6 @@ _:4
     [[SHACL]] RDF graph validation templates and instructions for the application of those templates to implementations.
   </p>
   <p></p>
-</section>
-<section id="implementations" class="informative">
-  <h2>Implementations</h2>
-  <p>Implementation conformance reports for this vocabulary are given in:</p>
-  <ul>
-    <li>
-      <a href="https://github.com/CSIRO-enviro-informatics/prof-ont-implementation-results">
-        https://github.com/CSIRO-enviro-informatics/prof-ont-implementation-results
-      </a>
-    </li>
-  </ul>
 </section>
 <section id="alignments" class="informative">
   <h2>Alignments</h2>
@@ -1945,8 +1937,8 @@ _:4
     </ul>
   </section>
 </section>
-<section id="security_and_privacy" class="informative">
-  <h2>Security and Privacy</h2>
+<section id="security" class="informative">
+  <h2>Security Considerations</h2>
   <p>
     The PROF vocabulary, when used with likely extensions such as [[DCTERMS]], supports the attribution of data and
     metadata to various participants such as data resource <a href="http://purl.org/dc/terms/creator">creators</a>,
@@ -1958,6 +1950,20 @@ _:4
     identifiers as <a href="https://www.w3.org/TR/odrl-vocab/#privacy-consideration">described</a> in [[ODRL-VOCAB]].
     Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security
     and privacy considerations are addressed at the application level.
+  </p>
+  <p>
+    For a more complete view of those issues, cf. the
+    <a href="https://www.w3.org/2017/dxwg/wiki/ProfPrivacyAndSecurityQuestionnaire">
+      Security and Privacy Questionnaire for this specification</a>.
+  </p>
+</section>
+<section id="privacy" class="informative">
+  <h2>Privacy Considerations</h2>
+  <p>
+
+    The Profile vocabulary, when used alongside extensions such as [[DCTERMS]], supports the attribution of data and metadata to various agents and participants, including <a href="http://purl.org/dc/terms/creator">creators</a> and <a href="http://purl.org/dc/terms/publisher">publishers</a>, via qualified relations. When integrated with frameworks that associate explicit  <a href="http://purl.org/dc/terms/rights">rights</a>, usage policies, and licenses with modeled Profiles and Resource Descriptors—such as [[ODRL-VOCAB]]—the underlying data graphs may incorporate or reference sensitive technical identifiers. These include, but are not limited to, distinct user and asset identifiers.
+
+    Consequently, implementations that produce, maintain, publish, or consume these vocabulary terms must enforce appropriate security controls at the application layer. System architects and developers must ensure that mechanisms governing the resolution, storage, and exchange of these identifiers guard against unauthorized access, tampering, or spoofing of profile resources and  <a href="http://purl.org/dc/terms/rights">rights</a> statements.
   </p>
   <p>
     For a more complete view of those issues, cf. the
@@ -1981,7 +1987,8 @@ _:4
       <li><a href="#conceptualmodel"></a> diagram updated, a sentence about how individual communities may interpret <code>dct:conformsTo</code> added, a second &amp; third Initial Example added</li>
       <li><a href="#specification"></a> class &amp; property definitions updated after much WG discussion, definitional phrasing aligned, some Usage Notes added, <code>dct:conformsTo</code> axiom added, diagrams updated</li>
       <li><a href="#alignments"></a> PROV alignment removed, OWL alignment still indicated incomplete with flagged Issue</li>
-      <li><a href="#security_and_privacy"></a> section completed</li>
+      <li><a href="#security"></a> split security and privacy section</li>
+      <li><a href="#privacy"></a> split security and privacy section</li>
       <li><a href="#appendices"></a> previous <em>Requirements</em> section removed as not used</li>
     </ul>
   </section>
