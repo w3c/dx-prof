@@ -93,10 +93,10 @@ var respecConfig = {
           editors: [
             "OGC Policy SWG"
           ],
-          href: "http://www.opengeospatial.org/standards/modularspec" ,
-          title: "The Specification Model — A Standard for Modular specifications" ,
-          status: "OGC Policy Directive" ,
-          date: "2009-10-19"
+          href: "https://www.ogc.org/standards/modspec/" ,
+          title: "The ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards" ,
+          status: "Open Geospatial Consortium Implementation Standard" ,
+          date: "2026-05-21"
         },
         "CFG-MGMT": {
           authors: [
