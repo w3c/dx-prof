@@ -132,11 +132,12 @@ var[data-type]::after{content:attr(data-type);transform:translateX(-50%) transla
 var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </style>
 <script id="initialUserConfig" type="application/json">{
-  "specStatus": "FPWD",
+  "specStatus": "ED",
   "shortName": "dx-prof",
   "edDraftURI": "https://w3c.github.io/dx-prof/prof/",
   "prevRecURI": "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
   "canonicalURI": "TR",
+  "implementationReportURI": "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
   "editors": [
     {
       "name": "Nicholas J. Car",
@@ -237,10 +238,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "editors": [
         "OGC Policy SWG"
       ],
-      "href": "http://www.opengeospatial.org/standards/modularspec",
-      "title": "The Specification Model — A Standard for Modular specifications",
-      "status": "OGC Policy Directive",
-      "date": "2009-10-19",
+      "href": "https://www.ogc.org/standards/modspec/",
+      "title": "The ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards",
+      "status": "Open Geospatial Consortium Implementation Standard",
+      "date": "2026-05-21",
       "id": "modspec"
     },
     "CFG-MGMT": {
@@ -256,21 +257,22 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "date": "2011-11-21"
     }
   },
-  "publishDate": "2026-07-30",
-  "publishISODate": "2026-07-30T00:00:00.000Z",
-  "generatedSubtitle": "W3C First Public Working Draft 30 July 2026"
+  "_ijt": "p614hd5qfeanl4f3o5g4om2dhe",
+  "_ij_reload": "RELOAD_ON_SAVE",
+  "publishISODate": "2026-07-13T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 13 July 2026"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 <body class="h-entry" id="respecDocument"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">The Profiles Vocabulary</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#FPWD">W3C First Public Working Draft</a> <time class="dt-published" datetime="2026-07-30">30 July 2026</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2026-07-13">13 July 2026</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2026/WD-dx-prof-20260730/">https://www.w3.org/TR/2026/WD-dx-prof-20260730/</a>
+                <a class="u-url" href="https://w3c.github.io/dx-prof/prof/">https://w3c.github.io/dx-prof/prof/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/dx-prof/">https://www.w3.org/TR/dx-prof/</a>
@@ -282,7 +284,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                     <a href="https://github.com/w3c/dx-prof/commits/">Commit history</a>
                   </dd>
         
-        
+        <dt>Implementation report:</dt><dd>
+                <a href="https://w3c.github.io/dx-prof/prof-impl-rpt/index.html">https://w3c.github.io/dx-prof/prof-impl-rpt/index.html</a>
+              </dd>
         
         
         <dt>Latest Recommendation:</dt><dd><a href="https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/">https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/</a></dd>
@@ -386,11 +390,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   
   <p>
     This document was published by the <a href="https://www.w3.org/groups/wg/dx">Dataset Exchange Working Group</a> as
-    a First Public Working Draft using the
-        <a href="https://www.w3.org/policies/process/20250818/#recs-and-notes">Recommendation
-          track</a>. 
+    an Editor's Draft. 
   </p><p>Publication as
-  a First Public Working Draft does not imply endorsement
+  an Editor's Draft does not imply endorsement
   by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
     This is a draft document and may be updated, replaced, or obsoleted by other
     documents at any time. It is inappropriate to cite this document as other
@@ -429,7 +431,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <li>The DXWG also plans to provide [<cite><a class="bibref" data-link-type="biblio" href="#bib-dx-prof-guidance" title="Profile Guidance">DX-PROF-GUIDANCE</a></cite>] - Profile Guidance: general recommendations and guidance on profiling.</li>
     </ul>
   </section>
-</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#FamilyOfDocs">Overview of DXWG documents on profiles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#diagramconventions"><bdi class="secno">2.1 </bdi>Diagram Conventions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#definitions"><bdi class="secno">3. </bdi>Definitions</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">4. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">5. </bdi>Motivation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivating-requirements"><bdi class="secno">5.1 </bdi>Motivating Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#relatedwork"><bdi class="secno">6. </bdi>Related Work</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#related-owl"><bdi class="secno">6.1 </bdi>Web Ontology Language (OWL)</a></li><li class="tocline"><a class="tocxref" href="#related-dcat"><bdi class="secno">6.2 </bdi>Data Catalog Vocabulary (DCAT)</a></li><li class="tocline"><a class="tocxref" href="#related-adms"><bdi class="secno">6.3 </bdi>Asset Description Metadata Schema (ADMS)</a></li><li class="tocline"><a class="tocxref" href="#related-prov"><bdi class="secno">6.4 </bdi>PROV-O: The PROV Ontology</a></li><li class="tocline"><a class="tocxref" href="#related-void"><bdi class="secno">6.5 </bdi>The VoID Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#related-voaf"><bdi class="secno">6.6 </bdi>Vocabulary of a Friend (VOAF)</a></li><li class="tocline"><a class="tocxref" href="#related-modspec"><bdi class="secno">6.7 </bdi>OGC's ModSpec</a></li><li class="tocline"><a class="tocxref" href="#related-constraintlanguages"><bdi class="secno">6.8 </bdi>Constraint Languages</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conceptualmodel"><bdi class="secno">7. </bdi>Conceptual Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#initial-examples"><bdi class="secno">7.1 </bdi>Initial Examples</a></li><li class="tocline"><a class="tocxref" href="#roles-vocab"><bdi class="secno">7.2 </bdi>Roles Vocabulary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#specification"><bdi class="secno">8. </bdi>Vocabulary Specification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#RDF-representation"><bdi class="secno">8.1 </bdi>RDF representation</a></li><li class="tocline"><a class="tocxref" href="#dependencies"><bdi class="secno">8.2 </bdi>Dependencies</a></li><li class="tocline"><a class="tocxref" href="#Class:Profile"><bdi class="secno">8.3 </bdi>Class: Profile</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Property:hasResource"><bdi class="secno">8.3.1 </bdi>Property: hasResource</a></li><li class="tocline"><a class="tocxref" href="#Property:isProfileOf"><bdi class="secno">8.3.2 </bdi>Property: isProfileOf</a></li><li class="tocline"><a class="tocxref" href="#Property:isTransitiveProfileOf"><bdi class="secno">8.3.3 </bdi>Property: isTransitiveProfileOf</a></li><li class="tocline"><a class="tocxref" href="#Property:hasToken"><bdi class="secno">8.3.4 </bdi>Property: hasToken</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Class:ResourceDescriptor"><bdi class="secno">8.4 </bdi>Class: ResourceDescriptor</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Property:hasArtifact"><bdi class="secno">8.4.1 </bdi>Property: hasArtifact</a></li><li class="tocline"><a class="tocxref" href="#Property:conformsTo"><bdi class="secno">8.4.2 </bdi>Property: dct:conformsTo</a></li><li class="tocline"><a class="tocxref" href="#Property:format"><bdi class="secno">8.4.3 </bdi>Property: dct:format</a></li><li class="tocline"><a class="tocxref" href="#Property:hasRole"><bdi class="secno">8.4.4 </bdi>Property: hasRole</a></li><li class="tocline"><a class="tocxref" href="#Property:isInheritedFrom"><bdi class="secno">8.4.5 </bdi>Property: isInheritedFrom</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Class:ResourceRole"><bdi class="secno">8.5 </bdi>Class: ResourceRole</a></li></ol></li><li class="tocline"><a class="tocxref" href="#resource-roles-vocab"><bdi class="secno">9. </bdi>Resource Role Instances</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Role:constraints"><bdi class="secno">9.1 </bdi>Resource Role: Constraints</a></li><li class="tocline"><a class="tocxref" href="#Role:example"><bdi class="secno">9.2 </bdi>Resource Role: Example</a></li><li class="tocline"><a class="tocxref" href="#Role:guidance"><bdi class="secno">9.3 </bdi>Resource Role: Guidance</a></li><li class="tocline"><a class="tocxref" href="#Role:mapping"><bdi class="secno">9.4 </bdi>Resource Role: Mapping</a></li><li class="tocline"><a class="tocxref" href="#Role:schema"><bdi class="secno">9.5 </bdi>Resource Role: Schema</a></li><li class="tocline"><a class="tocxref" href="#Role:specification"><bdi class="secno">9.6 </bdi>Resource Role: Specification</a></li><li class="tocline"><a class="tocxref" href="#Role:validation"><bdi class="secno">9.7 </bdi>Resource Role: Validation</a></li><li class="tocline"><a class="tocxref" href="#Role:vocabulary"><bdi class="secno">9.8 </bdi>Resource Role: Vocabulary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">10. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#eg-dcat-ap"><bdi class="secno">10.1 </bdi>DCAT-AP</a></li><li class="tocline"><a class="tocxref" href="#eg-hierarchy"><bdi class="secno">10.2 </bdi>DCAT-AP hierarchy</a></li><li class="tocline"><a class="tocxref" href="#eg-csiro-dummy-dcap"><bdi class="secno">10.3 </bdi>CSIRO Dummy Dublin Core AP</a></li><li class="tocline"><a class="tocxref" href="#eg-ga"><bdi class="secno">10.4 </bdi>Geoscience Australia's Profile of ISO19115-1:2014</a></li><li class="tocline"><a class="tocxref" href="#eg-adms"><bdi class="secno">10.5 </bdi>Asset Description Metadata Schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#testsuite"><bdi class="secno">11. </bdi>Test Suite</a></li><li class="tocline"><a class="tocxref" href="#implementations"><bdi class="secno">12. </bdi>Implementations</a></li><li class="tocline"><a class="tocxref" href="#alignments"><bdi class="secno">13. </bdi>Alignments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alignment-dcat"><bdi class="secno">13.1 </bdi>Dataset Catalogue Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#alignment-adms"><bdi class="secno">13.2 </bdi>Asset Description Metadata Schema</a></li><li class="tocline"><a class="tocxref" href="#alignment-dct"><bdi class="secno">13.3 </bdi>Dublin Core Terms</a></li><li class="tocline"><a class="tocxref" href="#alignment-owl"><bdi class="secno">13.4 </bdi>Web Ontology Language</a></li><li class="tocline"><a class="tocxref" href="#alignment-voaf"><bdi class="secno">13.5 </bdi>Vocabulary of a Friend</a></li><li class="tocline"><a class="tocxref" href="#alignment-modspec"><bdi class="secno">13.6 </bdi>OGC/ISO Modular Specification</a></li><li class="tocline"><a class="tocxref" href="#alignment-skos"><bdi class="secno">13.7 </bdi>Simple Knowledge Organization System</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security"><bdi class="secno">14. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy"><bdi class="secno">15. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changes"><bdi class="secno">16. </bdi>Changes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-since-2pwd"><bdi class="secno">16.1 </bdi>Changes since last Public Draft</a></li><li class="tocline"><a class="tocxref" href="#features-at-risk"><bdi class="secno">16.2 </bdi>Features at risk</a></li></ol></li><li class="tocline"><a class="tocxref" href="#appendices"><bdi class="secno">A. </bdi>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A.1 </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">A.2 </bdi>Issue summary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#FamilyOfDocs">Overview of DXWG documents on profiles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#diagramconventions"><bdi class="secno">2.1 </bdi>Diagram Conventions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#definitions"><bdi class="secno">3. </bdi>Definitions</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">4. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">5. </bdi>Motivation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivating-requirements"><bdi class="secno">5.1 </bdi>Motivating Requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#relatedwork"><bdi class="secno">6. </bdi>Related Work</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#related-owl"><bdi class="secno">6.1 </bdi>Web Ontology Language (OWL)</a></li><li class="tocline"><a class="tocxref" href="#related-dcat"><bdi class="secno">6.2 </bdi>Data Catalog Vocabulary (DCAT)</a></li><li class="tocline"><a class="tocxref" href="#related-adms"><bdi class="secno">6.3 </bdi>Asset Description Metadata Schema (ADMS)</a></li><li class="tocline"><a class="tocxref" href="#related-prov"><bdi class="secno">6.4 </bdi>PROV-O: The PROV Ontology</a></li><li class="tocline"><a class="tocxref" href="#related-void"><bdi class="secno">6.5 </bdi>The VoID Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#related-voaf"><bdi class="secno">6.6 </bdi>Vocabulary of a Friend (VOAF)</a></li><li class="tocline"><a class="tocxref" href="#related-modspec"><bdi class="secno">6.7 </bdi>OGC's ModSpec</a></li><li class="tocline"><a class="tocxref" href="#related-constraintlanguages"><bdi class="secno">6.8 </bdi>Constraint Languages</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conceptualmodel"><bdi class="secno">7. </bdi>Conceptual Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#initial-examples"><bdi class="secno">7.1 </bdi>Initial Examples</a></li><li class="tocline"><a class="tocxref" href="#roles-vocab"><bdi class="secno">7.2 </bdi>Roles Vocabulary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#specification"><bdi class="secno">8. </bdi>Vocabulary Specification</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#RDF-representation"><bdi class="secno">8.1 </bdi>RDF representation</a></li><li class="tocline"><a class="tocxref" href="#dependencies"><bdi class="secno">8.2 </bdi>Dependencies</a></li><li class="tocline"><a class="tocxref" href="#Class:Profile"><bdi class="secno">8.3 </bdi>Class: Profile</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Property:hasResource"><bdi class="secno">8.3.1 </bdi>Property: hasResource</a></li><li class="tocline"><a class="tocxref" href="#Property:isProfileOf"><bdi class="secno">8.3.2 </bdi>Property: isProfileOf</a></li><li class="tocline"><a class="tocxref" href="#Property:isTransitiveProfileOf"><bdi class="secno">8.3.3 </bdi>Property: isTransitiveProfileOf</a></li><li class="tocline"><a class="tocxref" href="#Property:hasToken"><bdi class="secno">8.3.4 </bdi>Property: hasToken</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Class:ResourceDescriptor"><bdi class="secno">8.4 </bdi>Class: ResourceDescriptor</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Property:hasArtifact"><bdi class="secno">8.4.1 </bdi>Property: hasArtifact</a></li><li class="tocline"><a class="tocxref" href="#Property:conformsTo"><bdi class="secno">8.4.2 </bdi>Property: dct:conformsTo</a></li><li class="tocline"><a class="tocxref" href="#Property:format"><bdi class="secno">8.4.3 </bdi>Property: dct:format</a></li><li class="tocline"><a class="tocxref" href="#Property:hasRole"><bdi class="secno">8.4.4 </bdi>Property: hasRole</a></li><li class="tocline"><a class="tocxref" href="#Property:isInheritedFrom"><bdi class="secno">8.4.5 </bdi>Property: isInheritedFrom</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Class:ResourceRole"><bdi class="secno">8.5 </bdi>Class: ResourceRole</a></li></ol></li><li class="tocline"><a class="tocxref" href="#resource-roles-vocab"><bdi class="secno">9. </bdi>Resource Role Instances</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Role:constraints"><bdi class="secno">9.1 </bdi>Resource Role: Constraints</a></li><li class="tocline"><a class="tocxref" href="#Role:example"><bdi class="secno">9.2 </bdi>Resource Role: Example</a></li><li class="tocline"><a class="tocxref" href="#Role:guidance"><bdi class="secno">9.3 </bdi>Resource Role: Guidance</a></li><li class="tocline"><a class="tocxref" href="#Role:mapping"><bdi class="secno">9.4 </bdi>Resource Role: Mapping</a></li><li class="tocline"><a class="tocxref" href="#Role:schema"><bdi class="secno">9.5 </bdi>Resource Role: Schema</a></li><li class="tocline"><a class="tocxref" href="#Role:specification"><bdi class="secno">9.6 </bdi>Resource Role: Specification</a></li><li class="tocline"><a class="tocxref" href="#Role:validation"><bdi class="secno">9.7 </bdi>Resource Role: Validation</a></li><li class="tocline"><a class="tocxref" href="#Role:vocabulary"><bdi class="secno">9.8 </bdi>Resource Role: Vocabulary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">10. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#eg-dcat-ap"><bdi class="secno">10.1 </bdi>DCAT-AP</a></li><li class="tocline"><a class="tocxref" href="#eg-hierarchy"><bdi class="secno">10.2 </bdi>DCAT-AP hierarchy</a></li><li class="tocline"><a class="tocxref" href="#eg-csiro-dummy-dcap"><bdi class="secno">10.3 </bdi>CSIRO Dummy Dublin Core AP</a></li><li class="tocline"><a class="tocxref" href="#eg-adms"><bdi class="secno">10.4 </bdi>Asset Description Metadata Schema</a></li></ol></li><li class="tocline"><a class="tocxref" href="#testsuite"><bdi class="secno">11. </bdi>Test Suite</a></li><li class="tocline"><a class="tocxref" href="#alignments"><bdi class="secno">12. </bdi>Alignments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alignment-dcat"><bdi class="secno">12.1 </bdi>Dataset Catalogue Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#alignment-adms"><bdi class="secno">12.2 </bdi>Asset Description Metadata Schema</a></li><li class="tocline"><a class="tocxref" href="#alignment-dct"><bdi class="secno">12.3 </bdi>Dublin Core Terms</a></li><li class="tocline"><a class="tocxref" href="#alignment-owl"><bdi class="secno">12.4 </bdi>Web Ontology Language</a></li><li class="tocline"><a class="tocxref" href="#alignment-voaf"><bdi class="secno">12.5 </bdi>Vocabulary of a Friend</a></li><li class="tocline"><a class="tocxref" href="#alignment-modspec"><bdi class="secno">12.6 </bdi>OGC/ISO Modular Specification</a></li><li class="tocline"><a class="tocxref" href="#alignment-skos"><bdi class="secno">12.7 </bdi>Simple Knowledge Organization System</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security"><bdi class="secno">13. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy"><bdi class="secno">14. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changes"><bdi class="secno">15. </bdi>Changes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-since-2pwd"><bdi class="secno">15.1 </bdi>Changes since last Public Draft</a></li><li class="tocline"><a class="tocxref" href="#features-at-risk"><bdi class="secno">15.2 </bdi>Features at risk</a></li></ol></li><li class="tocline"><a class="tocxref" href="#appendices"><bdi class="secno">A. </bdi>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A.1 </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#issue-summary"><bdi class="secno">A.2 </bdi>Issue summary</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 <section id="introduction" class="informative"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
   
   <p>
@@ -437,7 +439,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     to describe profiles. Its development was triggered by the appearance of multiple profiles of the Dataset Catalog
     Vocabulary (DCAT) [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat" title="Data Catalog Vocabulary (DCAT)">VOCAB-DCAT</a></cite>] and examples of profile description and implementation guidance systems such as
     the Guidelines for Dublin Core Application Profiles [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcap" title="Guidelines for Dublin Core Application Profiles">DCAP</a></cite>] and the OpenGeospatial Consortium's Standard for
-    Modular specifications [<cite><a class="bibref" data-link-type="biblio" href="#bib-modspec" title="The Specification Model — A Standard for Modular specifications">MODSPEC</a></cite>].
+    Modular specifications [<cite><a class="bibref" data-link-type="biblio" href="#bib-modspec" title="The ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards">MODSPEC</a></cite>].
   </p>
   <p>
     Profiles aim to increase interoperability within a community of users by introducing constraints, extensions or
@@ -454,12 +456,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 	</p>
   <p>
     This vocabulary's ontological basis for specification/profile relations is a specialization of the
-    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></code>
+    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code>
     class which is defined here as a <code><a href="#Class:Profile">prof:Profile</a></code>. A <code>prof:Profile</code>
     instance is related to either <code>dct:Standard</code> or <code>prof:Profile</code> instances by being a <em>profile of</em>
     them, formally, <a href="#Property:isProfileOf"><code>prof:isProfileOf</code></a>. Resources that conform to either a
     <code>dct:Standard</code> or a <code>prof:Profile</code> are formally described as doing so with the use of the
-    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></code>
+    <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></code>
     predicate.
 	</p>
   <p>
@@ -528,7 +530,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         A basis for comparison; a reference point against which other things can be evaluated.
       </p>
       <p>
-        <em>Source: DCMI Metadata Terms [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">Standard</a></code>.</em>
+        <em>Source: DCMI Metadata Terms [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">Standard</a></code>.</em>
       </p>
     </dd>
     <dt><dfn data-lt="data specification" id="dfn-data-specification" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">data specification</dfn></dt>
@@ -753,7 +755,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <p>
       No normative alignment between DCAT &amp; PROF is presented in this document however they can and should be used
       together and informative alignment between them (with revised DCAT [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-2" title="Data Catalog Vocabulary (DCAT) - Version 2">VOCAB-DCAT-2</a></cite>]) is given in
-      <a href="#alignment-dcat" class="sec-ref"><bdi class="secno">13.1 </bdi>Dataset Catalogue Vocabulary</a>.
+      <a href="#alignment-dcat" class="sec-ref"><bdi class="secno">12.1 </bdi>Dataset Catalogue Vocabulary</a>.
     </p>
   </section>
   <section id="related-adms"><div class="header-wrapper"><h3 id="x6-3-asset-description-metadata-schema-adms"><bdi class="secno">6.3 </bdi>Asset Description Metadata Schema (ADMS)</h3><a class="self-link" href="#related-adms" aria-label="Permalink for Section 6.3"></a></div>
@@ -773,7 +775,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </p>
     <p>
       As with DCAT, PROF can and should be used with ADMS however no normative alignment between them is presented here
-      but an informative alignment is given in <a href="#alignment-adms" class="sec-ref"><bdi class="secno">13.2 </bdi>Asset Description Metadata Schema</a>.
+      but an informative alignment is given in <a href="#alignment-adms" class="sec-ref"><bdi class="secno">12.2 </bdi>Asset Description Metadata Schema</a>.
     </p>
   </section>
   <section id="related-prov"><div class="header-wrapper"><h3 id="x6-4-prov-o-the-prov-ontology"><bdi class="secno">6.4 </bdi>PROV-O: The PROV Ontology</h3><a class="self-link" href="#related-prov" aria-label="Permalink for Section 6.4"></a></div>
@@ -918,10 +920,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
   </p>
   <p>
-    The model takes the <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></code> Class as a starting point and defines a specialization, a <code>Profile</code>, which is a <code>dct:Standard</code> that <em>profiles</em> a <code>dct:Standard</code> or another <code>Profile</code>. <code>Standards</code>s or <code>Profile</code>s can have <code>Resource Descriptor</code>s associated with
+    The model takes the <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code> Class as a starting point and defines a specialization, a <code>Profile</code>, which is a <code>dct:Standard</code> that <em>profiles</em> a <code>dct:Standard</code> or another <code>Profile</code>. <code>Standards</code>s or <code>Profile</code>s can have <code>Resource Descriptor</code>s associated with
   them that define rules for implementation, provide guidance on how to implement, or play some other role. <code>Resource Descriptor</code>s must indicate the role they
-  play (to guide, to validate etc.), the formalism they adhere to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-format">dct:format</a></code>)
-  and any <code>dct:Standard</code> that they themselves conform to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></code>).
+  play (to guide, to validate etc.), the formalism they adhere to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">dct:format</a></code>)
+  and any <code>dct:Standard</code> that they themselves conform to (<code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></code>).
   </p>
   <p>
     Any <code>rdfs:Resource</code> <em class="rfc2119">MAY</em> indicate conformance to a profile as per <a href="#eg-conformance-to-profile" class="box-ref">Example<bdi> 2</bdi></a>
@@ -1100,7 +1102,7 @@ CSIRO's publications catalogue."""@en ;
           </p>
         </td>
       </tr>
-      <tr><td class="prop">Sub class of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+      <tr><td class="prop">Sub class of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
       <tr><td class="prop">Source:</td><td><a href="https://www.w3.org/2017/dxwg/wiki/ProfileContext">https://www.w3.org/2017/dxwg/wiki/ProfileContext</a></td></tr>
       <tr><td class="prop">Usage Note:</td><td>The Profile class "may be used to model aspects of data structure and content (as per <a href="#dfn-profile" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-profile-5">profile</a>) or any other declared behaviour where a base specification can be identified and further requirements asserted.</td></tr>
       </tbody>
@@ -1131,7 +1133,7 @@ CSIRO's publications catalogue."""@en ;
           <tr><td class="prop">Definition:</td><td>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</td></tr>
           <tr><td class="prop">Sub property of:</td><td><a href="#Property:isTransitiveProfileOf">prof:isTransitiveProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
-          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
           <tr><td class="prop">Usage Note:</td>
             <td>
               <p>
@@ -1160,7 +1162,7 @@ CSIRO's publications catalogue."""@en ;
           <tr><td class="prop">Definition:</td><td>A specification this Profile conforms to</td></tr>
           <tr><td class="prop">Super property of:</td><td><a href="#Property:isProfileOf">prof:isProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
-          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-Standard">dct:Standard</a></td></tr>
+          <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
           <tr>
             <td class="prop">Usage note:</td>
             <td>
@@ -1291,7 +1293,7 @@ CSIRO's publications catalogue."""@en ;
   </section>
   <section id="Class:ResourceDescriptor" class="property"><div class="header-wrapper"><h3 id="x8-4-class-resourcedescriptor"><bdi class="secno">8.4 </bdi>Class: ResourceDescriptor</h3><a class="self-link" href="#Class:ResourceDescriptor" aria-label="Permalink for Section 8.4"></a></div>
     
-    <div class="issue" id="issue-container-number-6"><div class="issue-title marker" id="h-issue-0"><a href="https://github.com/w3c/dx-prof/issues/6"><span class="issue-number">Issue 6</span></a><span class="issue-label">: Rename Resource Descriptor class <a class="respec-gh-label" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22due+for+closing%22" style="background-color: rgb(229, 71, 174); color: rgb(0, 0, 0);" aria-label="GitHub label: due for closing">due for closing</a></span></div><p dir="auto">The Resource Descriptor class' name may not convey its intention well. This name needs to be reconsidered with discussion about it here.</p></div>
+    <div class="issue" id="issue-container-number-6"><div class="issue-title marker" id="h-issue-0"><a href="https://github.com/w3c/dx-prof/issues/6"><span class="issue-number">Issue 6</span></a><span class="issue-label">: Rename Resource Descriptor class <a class="respec-gh-label" style="background-color: rgb(229, 71, 174); color: rgb(0, 0, 0);" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22due+for+closing%22" aria-label="GitHub label: due for closing">due for closing</a></span></div><p dir="auto">The Resource Descriptor class' name may not convey its intention well. This name needs to be reconsidered with discussion about it here.</p></div>
     <table class="definition">
       <thead>
       <tr><th><a href="https://www.w3.org/TR/owl-syntax/#Classes">OWL Class</a></th><th><a href="#Class:ResourceDescriptor">prof:ResourceDescriptor</a></th></tr>
@@ -1321,12 +1323,12 @@ CSIRO's publications catalogue."""@en ;
       <p><em>This property is from the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>] specification however the property chain axiom declared here is new in PROF.</em></p>
       <table class="definition">
         <thead>
-        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">dct:conformsTo</a></th></tr>
+        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></th></tr>
         </thead>
         <tbody>
           <tr><td class="prop">Label:</td><td>Conforms To</td></tr>
           <tr><td class="prop">Definition:</td><td>An established standard to which the described resource conforms</td></tr>
-          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-relation">dct:relation</a></td></tr>
+          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relation">dct:relation</a></td></tr>
           <tr><td class="prop">Property Chain Axiom:</td><td><code>owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )</code></td></tr>
           <tr>
             <td class="prop">Usage note:</td>
@@ -1348,19 +1350,19 @@ CSIRO's publications catalogue."""@en ;
           </tr>
         </tbody>
       </table>
-      <div class="issue" id="issue-container-number-29"><div class="issue-title marker" id="h-issue-1"><a href="https://github.com/w3c/dx-prof/issues/29"><span class="issue-number">Issue 29</span></a><span class="issue-label">: Prof conformsTo axiom at risk <a class="respec-gh-label" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22at-risk%22" style="background-color: rgb(184, 232, 30); color: rgb(0, 0, 0);" aria-label="GitHub label: at-risk">at-risk</a></span></div><p dir="auto">The property chain axiom <code class="notranslate">dct:conformsTo owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo ) ;</code> is a "feature at risk" until discussion about its inclusion in PROF has reached a conclusion.</p></div>
+      <div class="issue" id="issue-container-number-29"><div class="issue-title marker" id="h-issue-1"><a href="https://github.com/w3c/dx-prof/issues/29"><span class="issue-number">Issue 29</span></a><span class="issue-label">: Prof conformsTo axiom at risk <a class="respec-gh-label" style="background-color: rgb(184, 232, 30); color: rgb(0, 0, 0);" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22at-risk%22" aria-label="GitHub label: at-risk">at-risk</a></span></div><p dir="auto">The property chain axiom <code class="notranslate">dct:conformsTo owl:propertyChainAxiom ( prof:isProfileOf dct:conformsTo ) ;</code> is a "feature at risk" until discussion about its inclusion in PROF has reached a conclusion.</p></div>
     </section>
     <section id="Property:format" class="property"><div class="header-wrapper"><h4 id="x8-4-3-property-dct-format"><bdi class="secno">8.4.3 </bdi>Property: dct:format</h4><a class="self-link" href="#Property:format" aria-label="Permalink for Section 8.4.3"></a></div>
       
       <p><em>This property's details are from the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>] specification.</em></p>
       <table class="definition">
         <thead>
-        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-format">dct:format</a></th></tr>
+        <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">dct:format</a></th></tr>
         </thead>
         <tbody>
           <tr><td class="prop">Label:</td><td>Format</td></tr>
           <tr><td class="prop">Definition:</td><td>The file format, physical medium, or dimensions of the resource</td></tr>
-          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#elements-format">dc:format</a></td></tr>
+          <tr><td class="prop">Sub property of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/format/">dc:format</a></td></tr>
         </tbody>
       </table>
     </section>
@@ -1490,7 +1492,7 @@ ex2:Profile_Y
 </section>
 <section id="resource-roles-vocab"><div class="header-wrapper"><h2 id="x9-resource-role-instances"><bdi class="secno">9. </bdi>Resource Role Instances</h2><a class="self-link" href="#resource-roles-vocab" aria-label="Permalink for Section 9."></a></div>
   
-  <div class="issue" id="issue-container-number-28"><div class="issue-title marker" id="h-issue-3"><a href="https://github.com/w3c/dx-prof/issues/28"><span class="issue-number">Issue 28</span></a><span class="issue-label">: Roles inclusion in PROF is at risk <a class="respec-gh-label" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22at-risk%22" style="background-color: rgb(184, 232, 30); color: rgb(0, 0, 0);" aria-label="GitHub label: at-risk">at-risk</a></span></div><p dir="auto">The example ResourceRole instances in this document are considered a "feature at risk" until the total list and definitions for them can be widely agreed to.</p>
+  <div class="issue" id="issue-container-number-28"><div class="issue-title marker" id="h-issue-3"><a href="https://github.com/w3c/dx-prof/issues/28"><span class="issue-number">Issue 28</span></a><span class="issue-label">: Roles inclusion in PROF is at risk <a class="respec-gh-label" style="background-color: rgb(184, 232, 30); color: rgb(0, 0, 0);" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22at-risk%22" aria-label="GitHub label: at-risk">at-risk</a></span></div><p dir="auto">The example ResourceRole instances in this document are considered a "feature at risk" until the total list and definitions for them can be widely agreed to.</p>
 <p dir="auto">If not listed here, ResourceRole instances will be listed in a supplimentary vocabulary to PROF.</p></div>
   <div class="issue" id="issue-container-number-22"><div class="issue-title marker" id="h-issue-4"><a href="https://github.com/w3c/dx-prof/issues/22"><span class="issue-number">Issue 22</span></a><span class="issue-label">: Should PROF roles be in a their own namespace?</span></div><p dir="auto">Currently <a href="https://www.w3.org/TR/dx-prof/#resource-roles-vocab" rel="nofollow">PROF roles</a> are defined in their own namespace, separate from the "base" one for PROF.<br>
 In <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="377693661" data-permission-text="Title is private" data-url="https://github.com/w3c/dxwg/issues/535" data-hovercard-type="issue" data-hovercard-url="/w3c/dxwg/issues/535/hovercard" href="https://github.com/w3c/dxwg/issues/535">w3c/dxwg#535</a> and <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="377694571" data-permission-text="Title is private" data-url="https://github.com/w3c/dxwg/issues/536" data-hovercard-type="issue" data-hovercard-url="/w3c/dxwg/issues/536/hovercard" href="https://github.com/w3c/dxwg/issues/536">w3c/dxwg#536</a> points have been made for and against having them in separate namespace. But that discussion was mixed with the discussion on whether they should be documented in the same document as PROF, which is slightly different.<br>
@@ -1941,115 +1943,8 @@ _:4
       <code>Constraints</code>) that are differentiated on other bases, here on format: plain text &amp; RDF (turtle).
     </p>
   </section>
-  <section id="eg-ga"><div class="header-wrapper"><h3 id="x10-4-geoscience-australia-s-profile-of-iso19115-1-2014"><bdi class="secno">10.4 </bdi>Geoscience Australia's Profile of ISO19115-1:2014</h3><a class="self-link" href="#eg-ga" aria-label="Permalink for Section 10.4"></a></div>
-    
-    <p>
-      <em>This example shows a non-RDF profile of a non-RDF standard: ISO19115-1:2014 (Geographic information) [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19115-1-2014" title="Geographic information -- Metadata -- Part 1: Fundamentals">ISO-19115-1-2014</a></cite>].</em>
-    </p>
-    <p>
-      Communities commonly make profiles of the International Organization for Standardization's standard
-      ISO19115-1:2014 Geographic information -- Metadata -- Part 1: Fundamentals used for cataloguing spatial datasets.
-      <a href="http://www.ga.gov.au">Geoscience Australia</a>, Australia's national geological survey agency, has
-      created a profile that constrains ISO19115-1:2014 in ways such as making optional properties in the standard
-      mandatory for profile conformance.
-    </p>
-    <p>
-      The GA Profile of ISO19115 is published online as a collection of profile resources with an index document with the persistent URI
-      <a href="http://pid.geoscience.gov.au/def/schema/ga/ISO19115-1-2014">http://pid.geoscience.gov.au/def/schema/ga/ISO19115-1-2014</a>.
-    </p>
-    <p>
-      Although not initially formulated with PROF in mind, nevertheless the various parts of the GA Profile of ISO19115
-      can be characterised using PROF as per <a href="#fig-eg-ga" class="fig-ref" title="The GA Profile of ISO19115 characterised using PROF.">Figure <bdi class="">10</bdi></a> and the example RDF below. Note that the
-      persistent URIs assigned to the profile by Geoscience Australia are used within the PROF description.
-    </p>
-    <figure id="fig-eg-ga">
-      <a href="examples/ga.svg">
-        <img src="examples/ga.svg" title="GA Profile of ISO19115 in PROF" style="width:90%;" alt="GA Profile of ISO19115 in PROF">
-      </a>
-      <figcaption><a class="self-link" href="#fig-eg-ga">Figure <bdi class="figno">10</bdi></a> <span class="fig-title">
-        The GA Profile of ISO19115 characterised using PROF.
-      </span></figcaption>
-    </figure>
-    <div class="example" id="eg-eg-ga">
-        <div class="marker">
-    <a class="self-link" href="#eg-eg-ga">Example<bdi> 9</bdi></a><span class="example-title">: GA Profile of ISO19115 according to PROF in RDF (turtle)</span>
-  </div> <pre class="nohighlight turtle" aria-busy="false" aria-live="polite">@prefix : &lt;http://www.w3.org/ns/dx/prof/examples/ga.ttl#&gt; .
-@prefix prof: &lt;http://www.w3.org/ns/dx/prof/&gt; .
-@prefix roles: &lt;http://www.w3.org/ns/dx/prof/roles/&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
-@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
-@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-
-:ISO19115-1-2014
-    a dct:Standard ;
-    rdfs:label "ISO ISO19115-1:2014" ;
-    rdfs:comment "The international standard ISO19115-1:2014 Geographic information - Metadata" ;
-    dc:publisher "International Organization for Standardization" ;
-    dct:source &lt;https://www.iso.org/standard/53798.html&gt;
-.
-
-&lt;http://pid.geoscience.gov.au/def/schema/ga/ISO19115-1-2014&gt;
-    a prof:Profile ;
-    prof:token "iso19115-ga" ;
-    rdfs:label "ISO19115-1:2014 GA Profile";
-    rdfs:comment """Provides a means to declare, and discover implementation profile resources to check, implementations of geographic metadata schema conforming to GA's profile."""@en;
-    dct:publisher &lt;http://pid.geoscience.gov.au/org/ga/geoscienceaustralia&gt; ;
-    prof:profileOf :ISO19115-1-2014 ;
-    prof:hasResource :web , :spec , :schema , :constraints ;
-.
-
-:web
-    a prof:ResourceDescriptor ;
-    rdfs:label "GA Profile guidance document online" ;
-    prof:hasRole roles:guidance ;
-    dct:conformsTo :WebPage ;
-    dct:format &lt;https://w3id.org/mediatypes/text/html&gt; ;
-    prof:hasArtifact &lt;http://pid.geoscience.gov.au/def/schema/ga/ISO19115-1-2014&gt; ;
-.
-
-:spec
-    a prof:ResourceDescriptor ;
-    rdfs:label "GA Profile specification document";
-    prof:hasRole roles:specification ;
-    dct:format &lt;https://w3id.org/mediatypes/application/pdf&gt; ;
-    prof:hasArtifact &lt;http://pid.geoscience.gov.au/dataset/ga/122551&gt; ;
-.
-
-:schema
-    a prof:ResourceDescriptor ;
-    rdfs:label "GA Profile XML Schema";
-    prof:hasRole roles:specification ;
-    dct:conformsTo :XSDSchema ;
-    dct:format &lt;https://w3id.org/mediatypes/text/xml&gt; ;
-    prof:hasArtifact &lt;http://pid.geoscience.gov.au/def/schema/ga/ISO19115-3-2016/gapm.xsd&gt; ;
-.
-
-:constraints
-    a prof:ResourceDescriptor ;
-    rdfs:label "GA Profile Schematron" ;
-    prof:hasRole roles:fullConstraints ;
-    dct:conformsTo :Schematron ;
-    dct:format &lt;https://w3id.org/mediatypes/text/xml&gt; ;
-    prof:hasArtifact &lt;http://pid.geoscience.gov.au/def/schema/ga/schematron-rules-ga.sch&gt; ;
-.
-
-:WebPage a dct:MediaTypeOrExtent ;
-    rdfs:label "Web Page" ;
-    rdfs:comment "A document written in HyperText Markup Language designed for human reading via a web browser." ;
-    dct:source &lt;https://www.w3.org/html/&gt; ;
-.
-
-:Schematron a dct:MediaTypeOrExtent ;
-    rdfs:label "Schematron" ;
-    rdfs:comment "A language for making assertions about the presence or absence of patterns in XML documents." ;
-    dct:source &lt;http://schematron.com&gt; ;
-.</pre>
-      </div>
-  </section>
-  <section id="eg-adms"><div class="header-wrapper"><h3 id="x10-5-asset-description-metadata-schema"><bdi class="secno">10.5 </bdi>Asset Description Metadata Schema</h3><a class="self-link" href="#eg-adms" aria-label="Permalink for Section 10.5"></a></div>
+  
+  <section id="eg-adms"><div class="header-wrapper"><h3 id="x10-4-asset-description-metadata-schema"><bdi class="secno">10.4 </bdi>Asset Description Metadata Schema</h3><a class="self-link" href="#eg-adms" aria-label="Permalink for Section 10.4"></a></div>
     
     <p>
       <em>This example shows a <code>Profile</code>, some of whose <code>Resource Descriptors</code> conform to standards.</em>
@@ -2063,13 +1958,13 @@ _:4
       <a href="examples/adms.svg">
         <img src="examples/adms.svg" title="ADMS profile of DCAT" style="width:90%;" alt="ADMS profile of DCAT">
       </a>
-      <figcaption><a class="self-link" href="#fig-eg-adms">Figure <bdi class="figno">11</bdi></a> <span class="fig-title">
+      <figcaption><a class="self-link" href="#fig-eg-adms">Figure <bdi class="figno">10</bdi></a> <span class="fig-title">
         The ADMS profile of DCAT.
       </span></figcaption>
     </figure>
     <div class="example" id="eg-eg-adms">
         <div class="marker">
-    <a class="self-link" href="#eg-eg-adms">Example<bdi> 10</bdi></a><span class="example-title">: ADMS profile of DCAT according to PROF in RDF (turtle)</span>
+    <a class="self-link" href="#eg-eg-adms">Example<bdi> 9</bdi></a><span class="example-title">: ADMS profile of DCAT according to PROF in RDF (turtle)</span>
   </div> <pre class="nohighlight turtle" aria-busy="false" aria-live="polite">@prefix : &lt;http://www.w3.org/ns/dx/prof/examples/adms.ttl#&gt; .
 @prefix prof: &lt;http://www.w3.org/ns/dx/prof/&gt; .
 @prefix roles: &lt;http://www.w3.org/ns/dx/prof/roles/&gt; .
@@ -2137,21 +2032,10 @@ _:4
   </p>
   <p></p>
 </section>
-<section id="implementations" class="informative"><div class="header-wrapper"><h2 id="x12-implementations"><bdi class="secno">12. </bdi>Implementations</h2><a class="self-link" href="#implementations" aria-label="Permalink for Section 12."></a></div><p><em>This section is non-normative.</em></p>
-  
-  <p>Implementation conformance reports for this vocabulary are given in:</p>
-  <ul>
-    <li>
-      <a href="https://github.com/CSIRO-enviro-informatics/prof-ont-implementation-results">
-        https://github.com/CSIRO-enviro-informatics/prof-ont-implementation-results
-      </a>
-    </li>
-  </ul>
-</section>
-<section id="alignments" class="informative"><div class="header-wrapper"><h2 id="x13-alignments"><bdi class="secno">13. </bdi>Alignments</h2><a class="self-link" href="#alignments" aria-label="Permalink for Section 13."></a></div><p><em>This section is non-normative.</em></p>
+<section id="alignments" class="informative"><div class="header-wrapper"><h2 id="x12-alignments"><bdi class="secno">12. </bdi>Alignments</h2><a class="self-link" href="#alignments" aria-label="Permalink for Section 12."></a></div><p><em>This section is non-normative.</em></p>
   
   <p>This section lists alignments between PROF and other, related, ontologies.</p>
-  <section id="alignment-dcat"><div class="header-wrapper"><h3 id="x13-1-dataset-catalogue-vocabulary"><bdi class="secno">13.1 </bdi>Dataset Catalogue Vocabulary</h3><a class="self-link" href="#alignment-dcat" aria-label="Permalink for Section 13.1"></a></div>
+  <section id="alignment-dcat"><div class="header-wrapper"><h3 id="x12-1-dataset-catalogue-vocabulary"><bdi class="secno">12.1 </bdi>Dataset Catalogue Vocabulary</h3><a class="self-link" href="#alignment-dcat" aria-label="Permalink for Section 12.1"></a></div>
     
     <p>
       PROF is considered a specialisation of the revised version of the Dataset Catalogue Vocabulary [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-2" title="Data Catalog Vocabulary (DCAT) - Version 2">VOCAB-DCAT-2</a></cite>]
@@ -2161,12 +2045,12 @@ _:4
       to consider general metadata needs when describing profiles.
     </p>
     <p>
-      These specialisations are indicated in <a href="#fig-align-dcat" class="fig-ref" title="Alignment of PROF with DCAT [VOCAB-DCAT-2].">Figure <bdi class="">12</bdi></a> below as well as the data element mapping
+      These specialisations are indicated in <a href="#fig-align-dcat" class="fig-ref" title="Alignment of PROF with DCAT [VOCAB-DCAT-2].">Figure <bdi class="">11</bdi></a> below as well as the data element mapping
       table that follows it.
     </p>
     <figure id="fig-align-dcat">
       <img src="alignments/dcat.svg" alt="Alignment of PROF with DCAT" style="width:30%;">
-      <figcaption><a class="self-link" href="#fig-align-dcat">Figure <bdi class="figno">12</bdi></a> <span class="fig-title">Alignment of PROF with DCAT [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-2" title="Data Catalog Vocabulary (DCAT) - Version 2">VOCAB-DCAT-2</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-dcat">Figure <bdi class="figno">11</bdi></a> <span class="fig-title">Alignment of PROF with DCAT [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-dcat-2" title="Data Catalog Vocabulary (DCAT) - Version 2">VOCAB-DCAT-2</a></cite>].</span></figcaption>
     </figure>
     <p>The following table relates PROF and DCAT elements.</p>
     <table id="alignment-dcat-table">
@@ -2186,11 +2070,11 @@ _:4
       <li><a href="alignments/dcat.ttl">alignments/dcat.ttl</a></li>
     </ul>
   </section>
-  <section id="alignment-adms"><div class="header-wrapper"><h3 id="x13-2-asset-description-metadata-schema"><bdi class="secno">13.2 </bdi>Asset Description Metadata Schema</h3><a class="self-link" href="#alignment-adms" aria-label="Permalink for Section 13.2"></a></div>
+  <section id="alignment-adms"><div class="header-wrapper"><h3 id="x12-2-asset-description-metadata-schema"><bdi class="secno">12.2 </bdi>Asset Description Metadata Schema</h3><a class="self-link" href="#alignment-adms" aria-label="Permalink for Section 12.2"></a></div>
     
     <p>
       The Asset Description Metadata Schema (ADMS) [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-adms" title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>] is a profile of DCAT, used to describe semantic
-      assets. PROF is aligned with ADMS as per <a href="#fig-align-adms" class="fig-ref" title="Alignment of PROF with ADMS [VOCAB-ADMS].">Figure <bdi class="">13</bdi></a> and table below.
+      assets. PROF is aligned with ADMS as per <a href="#fig-align-adms" class="fig-ref" title="Alignment of PROF with ADMS [VOCAB-ADMS].">Figure <bdi class="">12</bdi></a> and table below.
     </p>
     <p>
       Due to PROF being aligned with the revised version of DCAT and ADMS also being aligned with DCAT, classes and
@@ -2202,7 +2086,7 @@ _:4
     </p>
     <figure id="fig-align-adms">
       <img src="alignments/adms.svg" alt="Alignment of PROF with ADMS" style="width:50%;">
-      <figcaption><a class="self-link" href="#fig-align-adms">Figure <bdi class="figno">13</bdi></a> <span class="fig-title">Alignment of PROF with ADMS [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-adms" title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-adms">Figure <bdi class="figno">12</bdi></a> <span class="fig-title">Alignment of PROF with ADMS [<cite><a class="bibref" data-link-type="biblio" href="#bib-vocab-adms" title="Asset Description Metadata Schema (ADMS)">VOCAB-ADMS</a></cite>].</span></figcaption>
     </figure>
     <p>The following table relates PROF and ADMS elements.</p>
     <table id="alignment-adms-table">
@@ -2220,7 +2104,7 @@ _:4
       <li><a href="alignments/adms.ttl">alignments/adms.ttl</a></li>
     </ul>
   </section>
-  <section id="alignment-dct"><div class="header-wrapper"><h3 id="x13-3-dublin-core-terms"><bdi class="secno">13.3 </bdi>Dublin Core Terms</h3><a class="self-link" href="#alignment-dct" aria-label="Permalink for Section 13.3"></a></div>
+  <section id="alignment-dct"><div class="header-wrapper"><h3 id="x12-3-dublin-core-terms"><bdi class="secno">12.3 </bdi>Dublin Core Terms</h3><a class="self-link" href="#alignment-dct" aria-label="Permalink for Section 12.3"></a></div>
     
     <p>
       PROF makes use of Dublin Core Terms [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>] directly with the PROF class <code>prof:Profile</code> being a
@@ -2229,11 +2113,11 @@ _:4
       <code>prof:ResourceDescriptor</code> class.
     </p>
     <p>
-      PROF is aligned with Dublin Core Terms as per <a href="#fig-align-dct" class="fig-ref" title="Alignment of PROF with Dublin Core Terms [DCTERMS].">Figure <bdi class="">14</bdi></a> and table below.
+      PROF is aligned with Dublin Core Terms as per <a href="#fig-align-dct" class="fig-ref" title="Alignment of PROF with Dublin Core Terms [DCTERMS].">Figure <bdi class="">13</bdi></a> and table below.
     </p>
     <figure id="fig-align-dct">
       <img src="alignments/dct.svg" alt="Alignment of PROF with Dublin Core Terms" style="width:20%;">
-      <figcaption><a class="self-link" href="#fig-align-dct">Figure <bdi class="figno">14</bdi></a> <span class="fig-title">Alignment of PROF with Dublin Core Terms [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-dct">Figure <bdi class="figno">13</bdi></a> <span class="fig-title">Alignment of PROF with Dublin Core Terms [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>].</span></figcaption>
     </figure>
     <p>The following table relates PROF and Dublin Core Terms elements.</p>
     <table id="alignment-dct-table">
@@ -2252,9 +2136,9 @@ _:4
       <li><a href="alignments/dct.ttl">alignments/dct.ttl</a></li>
     </ul>
   </section>
-  <section id="alignment-owl"><div class="header-wrapper"><h3 id="x13-4-web-ontology-language"><bdi class="secno">13.4 </bdi>Web Ontology Language</h3><a class="self-link" href="#alignment-owl" aria-label="Permalink for Section 13.4"></a></div>
+  <section id="alignment-owl"><div class="header-wrapper"><h3 id="x12-4-web-ontology-language"><bdi class="secno">12.4 </bdi>Web Ontology Language</h3><a class="self-link" href="#alignment-owl" aria-label="Permalink for Section 12.4"></a></div>
     
-    <div class="issue" id="issue-container-number-10"><div class="issue-title marker" id="h-issue-5"><a href="https://github.com/w3c/dx-prof/issues/10"><span class="issue-number">Issue 10</span></a><span class="issue-label">: Alignment / differentiation with OWL <a class="respec-gh-label" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22feedback%22" style="background-color: rgb(226, 142, 201); color: rgb(0, 0, 0);" aria-label="GitHub label: feedback">feedback</a></span></div><p dir="auto">Raised by Reviewer 1 of the Profiles Ontology ESWC paper and elsewhere: PROF must differentiate itself from OWL, specifically <code class="notranslate">prof:isProfileOf</code> v. <code class="notranslate">owl:imports</code>.</p></div>
+    <div class="issue" id="issue-container-number-10"><div class="issue-title marker" id="h-issue-5"><a href="https://github.com/w3c/dx-prof/issues/10"><span class="issue-number">Issue 10</span></a><span class="issue-label">: Alignment / differentiation with OWL <a class="respec-gh-label" style="background-color: rgb(226, 142, 201); color: rgb(0, 0, 0);" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22feedback%22" aria-label="GitHub label: feedback">feedback</a></span></div><p dir="auto">Raised by Reviewer 1 of the Profiles Ontology ESWC paper and elsewhere: PROF must differentiate itself from OWL, specifically <code class="notranslate">prof:isProfileOf</code> v. <code class="notranslate">owl:imports</code>.</p></div>
     <p>
       PROF is a vocabulary formulated using the Web Ontology Language (OWL) [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">OWL2-OVERVIEW</a></cite>]. In addition to the basic
       modelling mechanics of PROF that use OWL, for example PROF classes being defined as <code>owl:Class</code>
@@ -2262,11 +2146,11 @@ _:4
       core PROF modelling concepts relate to OWL ontology concepts.
     </p>
     <p>
-      PROF is aligned with OWL at a conceptual modelling level as per <a href="#fig-align-owl" class="fig-ref" title="Alignment of PROF with OWL [OWL2-OVERVIEW].">Figure <bdi class="">15</bdi></a> and table below.
+      PROF is aligned with OWL at a conceptual modelling level as per <a href="#fig-align-owl" class="fig-ref" title="Alignment of PROF with OWL [OWL2-OVERVIEW].">Figure <bdi class="">14</bdi></a> and table below.
     </p>
     <figure id="fig-align-owl">
       <img src="alignments/owl.svg" alt="Alignment of PROF with OWL" style="width:50%;">
-      <figcaption><a class="self-link" href="#fig-align-owl">Figure <bdi class="figno">15</bdi></a> <span class="fig-title">Alignment of PROF with OWL [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">OWL2-OVERVIEW</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-owl">Figure <bdi class="figno">14</bdi></a> <span class="fig-title">Alignment of PROF with OWL [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">OWL2-OVERVIEW</a></cite>].</span></figcaption>
     </figure>
     <table id="alignment-owl-table">
       <thead>
@@ -2283,7 +2167,7 @@ _:4
       <li><a href="alignments/owl.ttl">alignments/owl.ttl</a></li>
     </ul>
   </section>
-  <section id="alignment-voaf"><div class="header-wrapper"><h3 id="x13-5-vocabulary-of-a-friend"><bdi class="secno">13.5 </bdi>Vocabulary of a Friend</h3><a class="self-link" href="#alignment-voaf" aria-label="Permalink for Section 13.5"></a></div>
+  <section id="alignment-voaf"><div class="header-wrapper"><h3 id="x12-5-vocabulary-of-a-friend"><bdi class="secno">12.5 </bdi>Vocabulary of a Friend</h3><a class="self-link" href="#alignment-voaf" aria-label="Permalink for Section 12.5"></a></div>
     
     <p>
       Vocabulary of a Friend (VOAF) is a vocabulary specification providing elements allowing the description of
@@ -2294,7 +2178,7 @@ _:4
     </p>
     <figure id="fig-align-voaf">
       <img src="alignments/voaf.svg" alt="Alignment of PROF with VOAF" style="width:50%;">
-      <figcaption><a class="self-link" href="#fig-align-voaf">Figure <bdi class="figno">16</bdi></a> <span class="fig-title">Alignment of PROF with VOAF [<cite><a class="bibref" data-link-type="biblio" href="#bib-voaf" title="Vocabulary of a Friend (VOAF)">VOAF</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-voaf">Figure <bdi class="figno">15</bdi></a> <span class="fig-title">Alignment of PROF with VOAF [<cite><a class="bibref" data-link-type="biblio" href="#bib-voaf" title="Vocabulary of a Friend (VOAF)">VOAF</a></cite>].</span></figcaption>
     </figure>
     <table id="alignment-voaf-table">
       <thead>
@@ -2317,14 +2201,14 @@ _:4
       <li><a href="alignments/voaf.ttl">alignments/voaf.ttl</a></li>
     </ul>
   </section>
-  <section id="alignment-modspec"><div class="header-wrapper"><h3 id="x13-6-ogc-iso-modular-specification"><bdi class="secno">13.6 </bdi>OGC/ISO Modular Specification</h3><a class="self-link" href="#alignment-modspec" aria-label="Permalink for Section 13.6"></a></div>
+  <section id="alignment-modspec"><div class="header-wrapper"><h3 id="x12-6-ogc-iso-modular-specification"><bdi class="secno">12.6 </bdi>OGC/ISO Modular Specification</h3><a class="self-link" href="#alignment-modspec" aria-label="Permalink for Section 12.6"></a></div>
     
     <div class="issue" id="issue-container-number-1-0"><div class="issue-title marker" id="h-issue-6"><a href="https://github.com/w3c/dx-prof/issues/1"><span class="issue-number">Issue 1</span></a><span class="issue-label">: Reference OGC ModSpec</span></div><p dir="auto">This issue was created in the <a href="https://w3c.github.io/dxwg/profilesont/" rel="nofollow">Profiles Ontology document</a> and is listed in it. Once consensus on addressing it is reached here in comments below, the results will be added to the document and the issue closed.</p>
 <p dir="auto">Refer to OGC Modular Specification policy [[modspec]] and related work in ISO TC/211 [[cfg-mgmt]].</p>
 <p dir="auto">These specifications define how dependencies between 'standards' can be handled in a manageable way.</p></div>
-    <div class="issue" id="issue-container-number-14"><div class="issue-title marker" id="h-issue-7"><a href="https://github.com/w3c/dx-prof/issues/14"><span class="issue-number">Issue 14</span></a><span class="issue-label">: PROF Voc &amp; OGC Testbed 14: Characterization of RDF Application Profiles <a class="respec-gh-label" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22feedback%22" style="background-color: rgb(226, 142, 201); color: rgb(0, 0, 0);" aria-label="GitHub label: feedback">feedback</a></span></div></div>
+    <div class="issue" id="issue-container-number-14"><div class="issue-title marker" id="h-issue-7"><a href="https://github.com/w3c/dx-prof/issues/14"><span class="issue-number">Issue 14</span></a><span class="issue-label">: PROF Voc &amp; OGC Testbed 14: Characterization of RDF Application Profiles <a class="respec-gh-label" style="background-color: rgb(226, 142, 201); color: rgb(0, 0, 0);" href="https://github.com/w3c/dx-prof/issues/?q=is%3Aissue+is%3Aopen+label%3A%22feedback%22" aria-label="GitHub label: feedback">feedback</a></span></div></div>
   </section>
-  <section id="alignment-skos"><div class="header-wrapper"><h3 id="x13-7-simple-knowledge-organization-system"><bdi class="secno">13.7 </bdi>Simple Knowledge Organization System</h3><a class="self-link" href="#alignment-skos" aria-label="Permalink for Section 13.7"></a></div>
+  <section id="alignment-skos"><div class="header-wrapper"><h3 id="x12-7-simple-knowledge-organization-system"><bdi class="secno">12.7 </bdi>Simple Knowledge Organization System</h3><a class="self-link" href="#alignment-skos" aria-label="Permalink for Section 12.7"></a></div>
     
     <p>
       The Simple Knowledge Organization System (SKOS) [<cite><a class="bibref" data-link-type="biblio" href="#bib-skos-reference" title="SKOS Simple Knowledge Organization System Reference">SKOS-REFERENCE</a></cite>] is a data model knowledge organization
@@ -2337,7 +2221,7 @@ _:4
     </p>
     <figure id="fig-align-skos">
       <img src="alignments/skos.svg" alt="Alignment of PROF with SKOS" style="width:20%;">
-      <figcaption><a class="self-link" href="#fig-align-skos">Figure <bdi class="figno">17</bdi></a> <span class="fig-title">Alignment of PROF with SKOS [<cite><a class="bibref" data-link-type="biblio" href="#bib-skos-reference" title="SKOS Simple Knowledge Organization System Reference">SKOS-REFERENCE</a></cite>].</span></figcaption>
+      <figcaption><a class="self-link" href="#fig-align-skos">Figure <bdi class="figno">16</bdi></a> <span class="fig-title">Alignment of PROF with SKOS [<cite><a class="bibref" data-link-type="biblio" href="#bib-skos-reference" title="SKOS Simple Knowledge Organization System Reference">SKOS-REFERENCE</a></cite>].</span></figcaption>
     </figure>
     <table id="alignment-skos-table">
       <thead>
@@ -2356,7 +2240,7 @@ _:4
     </ul>
   </section>
 </section>
-<section id="security" class="informative"><div class="header-wrapper"><h2 id="x14-security-considerations"><bdi class="secno">14. </bdi>Security Considerations</h2><a class="self-link" href="#security" aria-label="Permalink for Section 14."></a></div><p><em>This section is non-normative.</em></p>
+<section id="security" class="informative"><div class="header-wrapper"><h2 id="x13-security-considerations"><bdi class="secno">13. </bdi>Security Considerations</h2><a class="self-link" href="#security" aria-label="Permalink for Section 13."></a></div><p><em>This section is non-normative.</em></p>
   
   <p>
     The PROF vocabulary, when used with likely extensions such as [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcterms" title="DCMI Metadata Terms">DCTERMS</a></cite>], supports the attribution of data and
@@ -2376,7 +2260,7 @@ _:4
       Security and Privacy Questionnaire for this specification</a>.
   </p>
 </section>
-<section id="privacy" class="informative"><div class="header-wrapper"><h2 id="x15-privacy-considerations"><bdi class="secno">15. </bdi>Privacy Considerations</h2><a class="self-link" href="#privacy" aria-label="Permalink for Section 15."></a></div><p><em>This section is non-normative.</em></p>
+<section id="privacy" class="informative"><div class="header-wrapper"><h2 id="x14-privacy-considerations"><bdi class="secno">14. </bdi>Privacy Considerations</h2><a class="self-link" href="#privacy" aria-label="Permalink for Section 14."></a></div><p><em>This section is non-normative.</em></p>
   
   <p>
 
@@ -2390,9 +2274,9 @@ _:4
       Security and Privacy Questionnaire for this specification</a>.
   </p>
 </section>
-<section id="changes" class="informative"><div class="header-wrapper"><h2 id="x16-changes"><bdi class="secno">16. </bdi>Changes</h2><a class="self-link" href="#changes" aria-label="Permalink for Section 16."></a></div><p><em>This section is non-normative.</em></p>
+<section id="changes" class="informative"><div class="header-wrapper"><h2 id="x15-changes"><bdi class="secno">15. </bdi>Changes</h2><a class="self-link" href="#changes" aria-label="Permalink for Section 15."></a></div><p><em>This section is non-normative.</em></p>
   
-  <section id="changes-since-2pwd"><div class="header-wrapper"><h3 id="x16-1-changes-since-last-public-draft"><bdi class="secno">16.1 </bdi>Changes since last Public Draft</h3><a class="self-link" href="#changes-since-2pwd" aria-label="Permalink for Section 16.1"></a></div>
+  <section id="changes-since-2pwd"><div class="header-wrapper"><h3 id="x15-1-changes-since-last-public-draft"><bdi class="secno">15.1 </bdi>Changes since last Public Draft</h3><a class="self-link" href="#changes-since-2pwd" aria-label="Permalink for Section 15.1"></a></div>
     
     <p>Changes since the <a href="https://www.w3.org/TR/2018/WD-dx-prof-20181218/">Second Public Working Draft, 02 April 2019</a>, are:</p>
     <ul>
@@ -2405,13 +2289,13 @@ _:4
       <li><a href="#relatedwork" class="sec-ref"><bdi class="secno">6. </bdi>Related Work</a> filled with content, as per placeholder issues</li>
       <li><a href="#conceptualmodel" class="sec-ref"><bdi class="secno">7. </bdi>Conceptual Model</a> diagram updated, a sentence about how individual communities may interpret <code>dct:conformsTo</code> added, a second &amp; third Initial Example added</li>
       <li><a href="#specification" class="sec-ref"><bdi class="secno">8. </bdi>Vocabulary Specification</a> class &amp; property definitions updated after much WG discussion, definitional phrasing aligned, some Usage Notes added, <code>dct:conformsTo</code> axiom added, diagrams updated</li>
-      <li><a href="#alignments" class="sec-ref"><bdi class="secno">13. </bdi>Alignments</a> PROV alignment removed, OWL alignment still indicated incomplete with flagged Issue</li>
-      <li><a href="#security" class="sec-ref"><bdi class="secno">14. </bdi>Security Considerations</a> split security and privacy section</li>
-      <li><a href="#privacy" class="sec-ref"><bdi class="secno">15. </bdi>Privacy Considerations</a> split security and privacy section</li>
+      <li><a href="#alignments" class="sec-ref"><bdi class="secno">12. </bdi>Alignments</a> PROV alignment removed, OWL alignment still indicated incomplete with flagged Issue</li>
+      <li><a href="#security" class="sec-ref"><bdi class="secno">13. </bdi>Security Considerations</a> split security and privacy section</li>
+      <li><a href="#privacy" class="sec-ref"><bdi class="secno">14. </bdi>Privacy Considerations</a> split security and privacy section</li>
       <li><a href="#appendices" class="sec-ref"><bdi class="secno">A. </bdi>Appendices</a> previous <em>Requirements</em> section removed as not used</li>
     </ul>
   </section>
-  <section id="features-at-risk"><div class="header-wrapper"><h3 id="x16-2-features-at-risk"><bdi class="secno">16.2 </bdi>Features at risk</h3><a class="self-link" href="#features-at-risk" aria-label="Permalink for Section 16.2"></a></div>
+  <section id="features-at-risk"><div class="header-wrapper"><h3 id="x15-2-features-at-risk"><bdi class="secno">15.2 </bdi>Features at risk</h3><a class="self-link" href="#features-at-risk" aria-label="Permalink for Section 15.2"></a></div>
     
     <p>
       The following features of in this specification are considered AT RISK pending evidence of implementation:
@@ -2560,46 +2444,44 @@ _:4
     </div>
 
 
+
 <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-references"><bdi class="secno">B. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="b-1-normative-references"><bdi class="secno">B.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix B.1"></a></div>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script><section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-references"><bdi class="secno">B. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="b-1-normative-references"><bdi class="secno">B.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix B.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-dcterms">[DCTERMS]</dt><dd>
       <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"><cite>DCMI Metadata Terms</cite></a>. DCMI Usage Board.  DCMI. 20 January 2020. DCMI Recommendation. URL: <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</a>
@@ -2634,10 +2516,8 @@ _:4
       <a href="https://profilenegotiation.github.io/I-D-Profile-Negotiation/I-D-Profile-Negotiation"><cite>Indicating and Negotiating Profiles in HTTP</cite></a>. L. Svensson; R. Verborgh; H. Van de Sompel. 2019-11-20. IETF Internet-Draft. URL: <a href="https://profilenegotiation.github.io/I-D-Profile-Negotiation/I-D-Profile-Negotiation">https://profilenegotiation.github.io/I-D-Profile-Negotiation/I-D-Profile-Negotiation</a>
     </dd><dt id="bib-geodcat-ap">[GeoDCAT-AP]</dt><dd>
       <a href="https://semiceu.github.io/GeoDCAT-AP/releases/"><cite>GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe</cite></a>.  European Commission. 23 December 2020. URL: <a href="https://semiceu.github.io/GeoDCAT-AP/releases/">https://semiceu.github.io/GeoDCAT-AP/releases/</a>
-    </dd><dt id="bib-iso-19115-1-2014">[ISO-19115-1-2014]</dt><dd>
-      <a href="https://www.iso.org/standard/53798.html"><cite>Geographic information -- Metadata -- Part 1: Fundamentals</cite></a>. ISO/TC 211.  ISO. 2014. International Standard. URL: <a href="https://www.iso.org/standard/53798.html">https://www.iso.org/standard/53798.html</a>
     </dd><dt id="bib-modspec">[MODSPEC]</dt><dd>
-      <a href="http://www.opengeospatial.org/standards/modularspec"><cite>The Specification Model — A Standard for Modular specifications</cite></a>. 2009-10-19. OGC Policy Directive. URL: <a href="http://www.opengeospatial.org/standards/modularspec">http://www.opengeospatial.org/standards/modularspec</a>
+      <a href="https://www.ogc.org/standards/modspec/"><cite>The ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards</cite></a>. 2026-05-21. Open Geospatial Consortium Implementation Standard. URL: <a href="https://www.ogc.org/standards/modspec/">https://www.ogc.org/standards/modspec/</a>
     </dd><dt id="bib-odrl-vocab">[ODRL-VOCAB]</dt><dd>
       <a href="https://www.w3.org/TR/odrl-vocab/"><cite>ODRL Vocabulary &amp; Expression 2.2</cite></a>. Renato Iannella; Michael Steidl; Stuart Myles; Víctor Rodríguez-Doncel.  W3C. 15 February 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/odrl-vocab/">https://www.w3.org/TR/odrl-vocab/</a>
     </dd><dt id="bib-owl2-primer">[OWL2-PRIMER]</dt><dd>
