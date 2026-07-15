@@ -46,10 +46,20 @@ This vocabulary is both a SKOS vocabulary and also a list of instances of the Pr
 :manifest a owl:NamedIndividual,
         skos:Concept,
         prof:ResourceRole ;
-    skos:definition "An aggregation resource that organizes metadata about resources relevant to a profile."@en ;
+    skos:definition "A resource that organizes metadata about the resources associated with a profile."@en ;
     skos:prefLabel "Manifest"@en ;
     skos:topConceptOf : ;
-    skos:scopeNote "Use this Role when you want to indicate a resource that aggregates metadata about profile-relevant resources, such as schemas, specifications, validators, or vocabularies, especially where those resources are maintained externally to the profile itself. This role may be used for catalog or manifest-like resources, and may be used alongside other roles where appropriate."@en ;
+    skos:example """
+<https://example.org/profile> a prof:Profile ;
+    prof:hasResource [
+        a prof:ResourceDescriptor ;
+        prof:hasRole <http://www.w3.org/ns/dx/prof/role/manifest> ;
+        prof:hasArtifact <https://example.org/profile> ;
+        dct:format <https://www.iana.org/assignments/media-types/text/turtle> ;
+        dct:conformsTo <https://www.w3.org/TR/dx-prof/>
+    ] .
+"""@en ;
+    skos:scopeNote "Use this Role to identify a machine-readable resource that lists or describes resources associated with a profile, such as specifications, schemas, validators, vocabularies, or guidance. A PROF description of a Profile may itself play this role by acting as the manifest of the Profile's resources. Separate catalog- or manifest-like resources may also be used."@en ;
 .
 
 :constraints a owl:NamedIndividual,
