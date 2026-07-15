@@ -651,6 +651,28 @@ CSIRO's publications catalogue."""@en ;
       <a href="#resource-roles-vocab"></a>.
     </p>
   </section>
+  <section id="null-profiles">
+    <h3>Null Profiles</h3>
+    <p>
+      A <a>null profile</a> of a specification is a profile of that specification in which some formal modeling language
+      is used to implement some, and likely all the specification's rules, but no other rules, within the modeling language.
+    </p>
+    <p>
+      The main purpose of creating a null profile of a specification is to enable the testing of conformance
+      to that specification by a validation process. This purpose exists because many RDF data models exist that have a
+      model specification, perhaps an OWL model or only a natural-language document of a model, but do not provide a
+      mechanism for data validation, such as a [[SHACL]] validator. Examples of such models are: [[[vocab-dcat-3]]], [[[schema-org]]],
+      [[[vocab-data-cube]]], and many W3C standards.
+    </p>
+    <p>
+      No universal and precise methodology can be given for creation of a null profile of a specification,
+      because, by the task's very nature, the specification's rule(s) may be imprecisely defined, and thus
+      the method used to characterize them in a precise modeling language will vary just as the imprecise rule definition does.
+    </p>
+    <p>
+      See [[[#null-profile-examples]]] for examples of null profiles of other specifications.
+    </p>
+  </section>
 </section>
 <section id="specification">
   <h2>Vocabulary Specification</h2>
@@ -1721,6 +1743,35 @@ _:4
 &lt;http://www.w3.org/ns/dx/prof/examples/dcat.ttl#dcat-orig&gt;
     dct:conformsTo :W3Crec .
     </pre>
+  </section>
+</section>
+<section id="null-profile-examples" class="appendix informative">
+  <h2>Null Profile Examples</h2>
+  <p>
+    This appendix contains examples of <a>null profiles</a> of other specifications.
+  </p>
+  <section id="null-profile-of-pos">
+    <h3>Null Profile of POS</h3>
+    <p>
+      This profile is a <a>null profile</a> of the [[[!w3c-basic-geo]]]. The purpose of this profile is to demonstrate
+      what a null profile of a very simple RDF vocabulary looks like.
+    </p>
+    <p class="todo">TODO - see file pos.ttl in repo</p>
+  </section>
+  <section id="null-profile-of-prof">
+    <h3>Null Profile of PROF</h3>
+    <p>
+      This profile is a <a>null profile</a> of [[[dx-prof]]].
+    </p>
+    <p>
+      The purposes of this profile are to both provide a SHACL-based validator for PROF data and to demonstrate what a
+      slightly more complex null profile of a vocabulary looks like.
+    </p>
+    <p>
+      This null profile implements all the OWL rules of PROF as well as some rules stated in the PROF specification
+      that are not implemented in the PROF ontology.
+    </p>
+    <p class="todo">TODO</p>
   </section>
 </section>
 <section id="testsuite">
