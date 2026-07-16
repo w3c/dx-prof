@@ -4,7 +4,7 @@ var respecConfig = {
     edDraftURI: "https://www.w3.org/TR/2026/WD-dx-prof-20260730/",
     prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
     canonicalURI: "TR",
-    copyrightStart: "2027",
+    copyrightStart: "2026",
     implementationReportURI: "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
     editors: [
       {
