@@ -1,11 +1,11 @@
 var respecConfig = {
     specStatus: "FPWD",
-    shortName: "dx-prof",
-    edDraftURI: "https://www.w3.org/TR/2026/WD-dx-prof-20260730/",
-    prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/",
+    shortName: "dx-prof-1.0",
+    edDraftURI: "https://www.w3.org/TR/2026/WD-dx-prof-1.0-20260730/",
+    prevRecURI: "https://www.w3.org/TR/2019/NOTE-dx-prof-1.0-20191218/",
     canonicalURI: "TR",
     copyrightStart: "2026",
-    implementationReportURI: "https://w3c.github.io/dx-prof/prof-impl-rpt/index.html",
+    implementationReportURI: "https://w3c.github.io/dx-prof-1.0/prof-impl-rpt/index.html",
     editors: [
       {
         name:       "Nicholas J. Car",
