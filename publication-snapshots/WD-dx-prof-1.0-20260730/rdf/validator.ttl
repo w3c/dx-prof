@@ -1,0 +1,63 @@
+PREFIX : <http://www.w3.org/ns/dx/prof/validator/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <http://www.w3.org/ns/dx/prof/validator>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:ProfileDisjointFromResourceDescriptorShape
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message
+        "Instances of prof:Profile must not also be instances of prof:ResourceDescriptor." ,
+        "Profile and Resource Descriptor classes are disjoint" ;
+    sh:not
+        [
+            sh:class prof:ResourceDescriptor ;
+        ] ;
+    sh:targetClass prof:Profile ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "Profile Disjoint From Resource Descriptor Shape" ;
+.
+
+:ResourceDescriptorRequiredPropertiesShape
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "The Resource Descriptor does not have all the necessary properties" ;
+    sh:property
+        :hasArtifactExists ,
+        :hasRoleExists ;
+    sh:targetClass prof:ResourceDescriptor ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "Resource Descriptor Required Properties Shape" ;
+.
+
+:hasArtifactExists
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
+    sh:minCount 1 ;
+    sh:path prof:hasArtifact ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "has Artifact Exists Shape" ;
+.
+
+:hasRoleExists
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prof:hasRole ;
+    schema:citation "Derived from the Profile Vocabulary's OWL model" ;
+    schema:name "has Role Exists Shape" ;
+.
+
+sg:
+    a sh:ShapesGraph ;
+    schema:description "A minimal validator for Profiles Vocabulary profile definitions" ;
+    schema:name "DX Profiles Vocabulary Validator" ;
+.
