@@ -11,8 +11,8 @@
   <h2>Abstract</h2>
   <p>
     The Profiles Vocabulary is an RDF vocabulary created to allow the machine-readable description of profiles of
-    specifications for information resources. It can be used to describe profile hierarchies wherein profiles of
-    specifications may themselves have profiles indicated. It can also be used to link together multiple profile resources that make up a profile
+    standards for information resources. It can be used to describe profile hierarchies wherein profiles of
+    standards may themselves have profiles indicated. It can also be used to link together multiple profile resources that make up a profile
     - guidelines, validation tools, schemas, term lists and so on - and it allows for those profile resources to be
     described with formats, roles, and digital artifacts.
   </p>
@@ -50,8 +50,8 @@
       statistical summary of a dataset.
     </p>
     <p>
-      PROF concerns a more specific use of profiling: the creation and description of specifications that constrain,
-      extend, combine, or provide guidance about other specifications.
+      PROF concerns a more specific use of profiling: the creation and description of standards that constrain,
+      extend, combine, or provide guidance about other standards.
     </p>
   </section>
   <p>
@@ -63,19 +63,19 @@
   </p>
   <p>
     Profiles aim to increase interoperability within a community of users by introducing constraints, extensions or
-    combinations on the use of more general specifications. PROF is an RDF vocabulary created
-    to describe relations between <a>specifications</a> and <a>profiles</a> and the profile resources that define and implement
-    profiles. A <em>specification</em> is "A basis for comparison; a reference point against which other things
+    combinations on the use of more general standards. PROF is an RDF vocabulary created
+    to describe relations between <a>standards</a> and <a>profiles</a> and the profile resources that define and implement
+    profiles. A <em>standard</em> is "A basis for comparison; a reference point against which other things
     can be evaluated." (see the definition below) and a <em>profile</em>, perhaps an
-    <em>application profile</em>, is defined as "A [data/application] specification that constrains, extends, combines,
-    or provides guidance or explanation about the usage of other [data/application] specifications". Profile resources
+    <em>application profile</em>, is defined as "A [data/application] standard that constrains, extends, combines,
+    or provides guidance or explanation about the usage of other [data/application] standards". Profile resources
     may be human-readable documents (PDFs, textual documents), vocabularies, schemas or ontologies (XSD, RDF),
     constraint language resources used by specific validation tools (SHACL, ShEx, Schematron), or any other files or
-    profile resources that support the profile. In this specification, each profile resource is able to have roles
+    profile resources that support the profile. In this document's formulation of profiles, each <a>profile resource</a> is able to have roles
     assigned to it that define its functions within the profile.
 	</p>
   <p>
-    This vocabulary's ontological basis for specification/profile relations is a specialization of the
+    This vocabulary's ontological basis for standard/profile relations is a specialization of the
     <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code>
     class which is defined here as a <code><a href="#Class:Profile">prof:Profile</a></code>. A <code>prof:Profile</code>
     instance is related to either <code>dct:Standard</code> or <code>prof:Profile</code> instances by being a <em>profile of</em>
@@ -91,15 +91,15 @@
     test for conformance if indeed they wish to.
   </p>
   <p>
-    In recognition of the existence of specifications and profiles that are made up of multiple resources &ndash;
+    In recognition of the existence of standards and profiles that are made up of multiple resources &ndash;
     perhaps PDF documents, machine-readable constraint language files, code lists etc. &ndash; this vocabulary also
-    provides for the description of the parts that constitute a profile or a specification. It defines a
+    provides for the description of the parts that constitute a profile or a standard. It defines a
     <a href="#Class:ResourceDescriptor"><code>prof:ResourceDescriptor</code></a> class which is used to qualify the
     relationship between a profile and profile resources. A <code>prof:Profile</code> may have any number of
     <a href="#Property:hasResource"><code>prof:hasResource</code></a> predicates indicating <code>prof:ResourceDescriptor</code>
     instances which then indicate the location (a URI) of the actual profile resource artifact with a
-    <a href="#Property:hasArtifact"><code>prof:hasArtifact</code></a> predicate and then may describes the artifact's
-    format and any specifications it conforms to with <a href="#Property:format"><code>dct:format</code></a> &amp;
+    <a href="#Property:hasArtifact"><code>prof:hasArtifact</code></a> predicate and then may describe the artifact's
+    format and any standards it conforms to with <a href="#Property:format"><code>dct:format</code></a> &amp;
     <a href="#Property:conformsTo"><code>dct:conformsTo</code></a> predicates respectively. The role that the profile resource
     plays with respect to the profile may be indicating using a <a href="#Class:ResourceRole"><code>prof:ResourceRole</code></a>
     class instance linked to it with the <a href="#Property:hasRole"><code>prof:hasRole</code></a> predicate.
@@ -123,33 +123,36 @@
   <section id="diagramconventions">
     <h3>Diagram Conventions</h3>
     <p>
-      All diagrams in this specification, apart from <a href="#fig-skos-4.5.2"></a>, use elements defined in this key.
+      All diagrams in this document, apart from <a href="#fig-skos-4.5.2"></a>, use elements defined in this key.
       The namespace prefixes in the key are defined in <a href="#namespaces"></a>.
     </p>
     <figure id="fig-element-key">
       <a href="figures/element-key.svg">
         <img src="figures/element-key.svg" alt="Diagram's element key" />
       </a>
-      <figcaption>A key of the elements used in this specification's diagrams</figcaption>
+      <figcaption>A key of the elements used in this document's diagrams</figcaption>
     </figure>
   </section>
 </section>
 <section id="definitions">
   <h2>Definitions</h2>
   <dl>
-    <dt><dfn data-lt="specification">specification</dfn></dt>
+    <dt><dfn data-lt="standard|specification">standard</dfn></dt>
     <dd>
       <p>
         A basis for comparison; a reference point against which other things can be evaluated.
       </p>
       <p>
-        <em>Source: DCMI Metadata Terms [[DCTERMS]]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">Standard</a></code>.</em>
+        <em>Source: DCMI Metadata Terms [[[DCTERMS]]]'s definition for a <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">Standard</a></code>.</em>
+      </p>
+      <p>
+        <em>Historically, the word <em>specification</em> may be used to mean the same thing as standard but 'standard' is now the prefered term.</em>
       </p>
     </dd>
     <dt><dfn data-lt="profile|data profile">profile</dfn></dt>
     <dd>
       <p>
-        A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+        A standard that constrains, extends, combines, or provides guidance or explanation about the usage of other standards.
       </p>
       <p>
         This definition includes what are sometimes called "data profiles", "application profiles", "metadata application profiles", or "metadata profiles". In this document, the other variants are all referred to as just "profiles".
@@ -161,13 +164,13 @@
         An entity is identified by a URI for use within a profile description.
       </p>
       <p>
-        Familiar examples include an electronic document, an image, a source of information with a consistent purpose. [[RFC3986]]
+        Familiar examples include an electronic document, an image, a source of information with a consistent purpose, source: [[[RFC3986]]]
       </p>
     </dd>
     <dt><dfn>null profile</dfn></dt>
     <dd>
       A <em>profile</em> in which a formal modeling language
-      is used to implement some, and likely all, of the profiled specification's rules, but no other rules.
+      is used to implement some, and likely all, of the profiled standard's rules, but no other rules.
     </dd>
   </dl>
 </section>
@@ -183,7 +186,7 @@
     of the <code>prof:ResourceRole</code> which are within the <code>http://www.w3.org/ns/dx/prof/role/</code> namespace.
   </p>
   <p>
-    A full set of namespaces and prefixes used in this specification is given in the table below.
+    A full set of namespaces and prefixes used in this document is given in the table below.
   </p>
   <table id="namespaces-table">
     <thead>
@@ -245,7 +248,7 @@
     </li>
   </ul>
   <p>
-    Regarding profile/specification relations, a mechanism to relate profiles to specifications and other profiles,
+    Regarding standard/profile relations, a mechanism to relate standards to profiles and profiles to other profiles,
     would allow both immediate knowledge of what things a profile profiles and also allow profile hierarchies to be established
     which could:
   </p>
@@ -255,7 +258,7 @@
       <ul>
         <li>
           one can profile another profile, adding a small set of additional constraints and declaring compatibility
-          with all profiled specifications.
+          with all profiled standards.
         </li>
         <li>
           reducing the total effort and information necessary to specify a profile
@@ -315,7 +318,7 @@
       and structures and is easily recognized as a specialized OWL ontology.
     </p>
     <p>
-      Regarding profiling, none of the various OWL (or the updated OWL2) specifications directly address profiling, as
+      Regarding profiling, none of the various OWL (or the updated OWL2) standards directly address profiling, as
       it's understood here, however OWL does include "ontology properties" that "can be used to associate information
       with an ontology" [[OWL2-RDF-BASED-SEMANTICS]] (<a href="https://www.w3.org/TR/owl2-syntax/#Ontology_Annotations">&#167; 3.5 Ontology Annotations</a>).
       In particular, the ontology and annotation property <code>owl:imports</code> allows an ontology to indicate that
@@ -358,10 +361,10 @@
     </p>
     <p>
       The main subject that differentiates PROF from DCAT is that PROF specifically addresses the notion of conformance
-      &ndash; of <a>profiles</a> to <a>specifications</a> or other profiles &ndash; about which DCAT is silent. DCAT
+      &ndash; of <a>profiles</a> to <a>standards</a> or other profiles &ndash; about which DCAT is silent. DCAT
       does address the notion of instance data conforming to an "established standard" (see it's suggested use of the
       <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to"><code>dct:conformsTo</code> property</a>
-      and here &ndash; instance data conformance to specifications &ndash; DCAT and PROF offer compatible instructions.
+      and here &ndash; instance data conformance to standards &ndash; DCAT and PROF offer compatible instructions.
     </p>
     <p>
       No normative alignment between DCAT &amp PROF is presented in this document however they can and should be used
@@ -380,7 +383,7 @@
       ADMS has been specifically designed for documenting an "asset", not only to make it discoverable, but also to
       provide contextual information (e.g., who's the publisher, which versions of an asset exist, etc.) and does not
       specifically address the core motivating notion for PROF of relating to conformance between profiles and
-      specifications or profiles. In this regard, the relation of PROF to ADMS is similar to that of PROF to DCAT: there
+      standards or profiles. In this regard, the relation of PROF to ADMS is similar to that of PROF to DCAT: there
       is some overlap with respect to class structures and the recommended use of particular annotation properties
       &ndash; title, description, etc. &ndash; for class instances.
     </p>
@@ -405,8 +408,8 @@
       that can be used to specialise their use.
     </p>
     <p>
-      PROV-O does not address notions of conformance &ndash; of data to specifications/profiles or specifications/
-      profiles to other specifications/profiles &ndash; however the DXWG debated whether <code>prof:isProfileOf</code>
+      PROV-O does not address notions of conformance &ndash; of data to standards/profiles or standards/
+      profiles to other standards/profiles &ndash; however the DXWG debated whether <code>prof:isProfileOf</code>
       could be considered a sub-property of PROV-O's <code>prov:wasDerivedFrom</code> (see discussion within
       <a href="https://github.com/w3c/dxwg/issues/485">DXWG's Issue 485</a>). The outcome of that discussion was that
       DXWG felt that since <code>prov:wasDerivedFrom</code> doesn’t say anything about dependency but that
@@ -526,7 +529,7 @@
     <figcaption>OWL [[OWL2-OVERVIEW]] overview diagram of this vocabulary</figcaption>
   </figure>
   <p>
-    This vocabulary is for describing relationships between standards/specifications, profiles of them and supporting artifacts such as validating resources.
+    This vocabulary is for describing relationships between standards, profiles of them and supporting artifacts such as validating resources.
   </p>
   <p>
     The model takes the <code><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></code> Class as a starting point and defines a specialization, a <code>Profile</code>, which is a <code>dct:Standard</code> that <em>profiles</em> a <code>dct:Standard</code> or another <code>Profile</code>. <code>Standards</code>s or <code>Profile</code>s can have <code>Resource Descriptor</code>s associated with
@@ -611,7 +614,7 @@ CSIRO's publications catalogue."""@en ;
     <p>
       The following example demonstrates how data resources can indicate conformance to a profile. Note that in
       <a href="#eg-initial-example"></a>, there is also an example of this pattern whereby the <code>ResourceDescriptor</code>
-      is indicated as conforming to the [[SHACL]] specification, which is also understood to be a profile to which
+      is indicated as conforming to the [[SHACL]] standard, which is also understood to be a profile to which
       things  may conform.
     </p>
     <pre id="eg-conformance-to-profile"
@@ -640,7 +643,7 @@ CSIRO's publications catalogue."""@en ;
     <pre id="eg-conformance-axiom"
          class="example nohighlight turtle" aria-busy="false" aria-live="polite"
          title="Demonstrating conformance via the vocabulary's dct:conformsTo/prof:isProfileOf property chain.">
-# Profile X, is a profile of Specification Y
+# Profile X, is a profile of Standard Y
 &lt;http://example.org/profile/x> a prof:Profile ;
       prof:isProfileOf &lt;http://example.org/specification/y>
       dct:title "Profile X" .
@@ -651,7 +654,7 @@ CSIRO's publications catalogue."""@en ;
 
 # Due to the property chain axiom:
 # dct:conformsTo owl:propertyChainAxiom ( dct:conformsTo prof:isProfileOf )
-# the data resource above can be inferred to conform to Specification Y
+# the data resource above can be inferred to conform to Standard Y
 &lt;http://example.org/resource/a>
       <strong>dct:conformsTo &lt;http://example.org/specification/y></strong> .  # this triple is inferred
     </pre>
@@ -721,7 +724,7 @@ CSIRO's publications catalogue."""@en ;
         <td class="prop">Definition:</td>
         <td>
           <p>
-            A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+            A standard that constrains, extends, combines, or provides guidance or explanation about the usage of other standards.
           </p>
           <p>
             This definition includes what are sometimes called "application profiles", "metadata application profiles",
@@ -731,7 +734,7 @@ CSIRO's publications catalogue."""@en ;
       </tr>
       <tr><td class="prop">Sub class of:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
       <tr><td class="prop">Source:</td><td><a href="https://www.w3.org/2017/dxwg/wiki/ProfileContext">https://www.w3.org/2017/dxwg/wiki/ProfileContext</a></td></tr>
-      <tr><td class="prop">Usage Note:</td><td>The Profile class "may be used to model aspects of data structure and content (as per <a>profile</a>) or any other declared behaviour where a base specification can be identified and further requirements asserted.</td></tr>
+      <tr><td class="prop">Usage Note:</td><td>The Profile class "may be used to model aspects of data structure and content (as per <a>profile</a>) or any other declared behavior where a base standard can be identified and further requirements asserted.</td></tr>
       </tbody>
     </table>
     <section id="Property:hasResource" class="property">
@@ -757,14 +760,14 @@ CSIRO's publications catalogue."""@en ;
         <tbody>
           <tr><td class="prop">OWL type:</td><td><a href="https://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-properties">owl:ObjectProperty</a></td></tr>
           <tr><td class="prop">Label:</td><td>is profile of</td></tr>
-          <tr><td class="prop">Definition:</td><td>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</td></tr>
+          <tr><td class="prop">Definition:</td><td>A standard for which this Profile defines constraints, extensions, or which it uses in combination with other standards, or provides guidance or explanation about its usage</td></tr>
           <tr><td class="prop">Sub property of:</td><td><a href="#Property:isTransitiveProfileOf">prof:isTransitiveProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
           <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
           <tr><td class="prop">Usage Note:</td>
             <td>
               <p>
-                A Profile may define constraints on the usage of one or more specifications. All constraints of these specifications are inherited, in the sense that an object conforming to a profile conforms to all the constraints specified the targets of prof:isProfileOf relations. This property is optional, allowing any specification to be declared at the root of a profile hierarchy using the Profile class.
+                A Profile may define constraints on the usage of one or more standards. All constraints of these standards are inherited, in the sense that an object conforming to a profile conforms to all the constraints specified the targets of prof:isProfileOf relations. This property is optional, allowing any standard to be declared at the root of a profile hierarchy using the Profile class.
               </p>
               <p>
                 Note that the axiom within this vocabulary that allows the inference that conformance to a profile means conformance to anything it profiles is part of the definition <code><a href="#Property:conformsTo"></a></code>.
@@ -786,7 +789,7 @@ CSIRO's publications catalogue."""@en ;
         <tbody>
           <tr><td class="prop">OWL type:</td><td><a href="https://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-properties">owl:ObjectProperty</a></td></tr>
           <tr><td class="prop">Label:</td><td>is a transitive profile of</td></tr>
-          <tr><td class="prop">Definition:</td><td>A specification this Profile conforms to</td></tr>
+          <tr><td class="prop">Definition:</td><td>A standard this Profile conforms to</td></tr>
           <tr><td class="prop">Super property of:</td><td><a href="#Property:isProfileOf">prof:isProfileOf</a></td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
           <tr><td class="prop">Range:</td><td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#Standard">dct:Standard</a></td></tr>
@@ -794,7 +797,7 @@ CSIRO's publications catalogue."""@en ;
             <td class="prop">Usage note:</td>
             <td>
               <p>
-                This is a convenience property that may be used to access all specifications (including other profiles) that could provide useful information and related resources for the Profile (for example, for better identifying conformance requirements). This avoids forcing clients to traverse a profile hierarchy to find all relevant resources. If this property is used, then all such relationships should be present so a client can safely avoid hierarchy traversal.
+                This is a convenience property that may be used to access all standards (including other profiles) that could provide useful information and related resources for the Profile (for example, for better identifying conformance requirements). This avoids forcing clients to traverse a profile hierarchy to find all relevant resources. If this property is used, then all such relationships should be present so a client can safely avoid hierarchy traversal.
               </p>
             </td>
           </tr>
@@ -947,7 +950,7 @@ CSIRO's publications catalogue."""@en ;
     </section>
     <section id="Property:conformsTo" class="property">
       <h4>Property: dct:conformsTo</h4>
-      <p><em>This property is from the [[DCTERMS]] specification however the property chain axiom declared here is new in PROF.</em></p>
+      <p><em>This property is from the [[DCTERMS]] standard however the property chain axiom declared here is new in PROF.</em></p>
       <table class="definition">
         <thead>
         <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">dct:conformsTo</a></th></tr>
@@ -961,7 +964,7 @@ CSIRO's publications catalogue."""@en ;
             <td class="prop">Usage note:</td>
             <td>
               <p>
-                This property is to be used to show conformance of a data resource to a specification (<code>dct:Standard</code>)
+                This property is to be used to show conformance of a data resource to a standard (<code>dct:Standard</code>)
                 or a profile (<code>prof:Profile</code>).
               </p>
               <p>
@@ -970,7 +973,7 @@ CSIRO's publications catalogue."""@en ;
                 inferred to be conformant to that other thing too.
               </p>
               <p>
-                PROF does not specify the nature of conformance: communities using <a>specifications</a> and <a>profiles</a>
+                PROF does not specify the nature of conformance: communities using <a>standards</a> and <a>profiles</a>
                 are free to define appropriate conformance for their purposes.
               </p>
             </td>
@@ -981,7 +984,7 @@ CSIRO's publications catalogue."""@en ;
     </section>
     <section id="Property:format" class="property">
       <h4>Property: dct:format</h4>
-      <p><em>This property's details are from the [[DCTERMS]] specification.</em></p>
+      <p><em>This property's details are from the [[DCTERMS]] standard.</em></p>
       <table class="definition">
         <thead>
         <tr><th>RDF Property:</th><th><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">dct:format</a></th></tr>
@@ -1016,7 +1019,7 @@ CSIRO's publications catalogue."""@en ;
         </thead>
         <tbody>
           <tr><td class="prop">Label:</td><td>is inherited from</td></tr>
-          <tr><td class="prop">Definition:</td><td>A base specification, a Resource Descriptor from which is to be considered a Resource Descriptor for this Profile also</td></tr>
+          <tr><td class="prop">Definition:</td><td>A base standard, a Resource Descriptor from which is to be considered a Resource Descriptor for this Profile also</td></tr>
           <tr><td class="prop">Domain:</td><td><a href="#Class:ResourceDescriptor">prof:ResourceDescriptor</a></td></tr>
           <tr><td class="prop">Range:</td><td><a href="#Class:Profile">prof:Profile</a></td></tr>
           <tr><td class="prop">Usage note:</td><td>This property is created for the convenience of clients. When profile describers wish to allow clients to discover all profile resources relevant to a Profile without having to navigating an inheritance hierarchy of prof:profileOf relations, this predicate may be used to directly associate inherited Profile Descriptors with the Profile. If this property is present, it should be used consistently and all relevant profile resources a client may need to utilise the profile should be present and described using this predicate</td></tr>
@@ -1145,7 +1148,7 @@ ex2:Profile_Y
       <tbody>
       <tr><td class="prop">Pref Label:</td><td>Constraints</td></tr>
       <tr><td class="prop">Definition:</td><td>Descriptions of obligations, limitations or extensions that the profile defines</td></tr>
-      <tr><td class="prop">Usage Note:</td><td>Use this Role when you want to indicate the constraints that the associated Profile imposes on top of base specifications</td></tr>
+      <tr><td class="prop">Usage Note:</td><td>Use this Role when you want to indicate the constraints that the associated Profile imposes on top of base standards</td></tr>
       </tbody>
     </table>
   </section>
@@ -1189,7 +1192,7 @@ ex2:Profile_Y
       </thead>
       <tbody>
       <tr><td class="prop">Pref Label:</td><td>Mapping</td></tr>
-      <tr><td class="prop">Definition:</td><td>Describes conversions between two specifications</td></tr>
+      <tr><td class="prop">Definition:</td><td>Describes conversions between two standards</td></tr>
       </tbody>
     </table>
   </section>
@@ -1248,7 +1251,7 @@ ex2:Profile_Y
       </thead>
       <tbody>
       <tr><td class="prop">Pref Label:</td><td>Vocabulary</td></tr>
-      <tr><td class="prop">Definition:</td><td>Defines terms used in the profile specification</td></tr>
+      <tr><td class="prop">Definition:</td><td>Defines terms used in the profile</td></tr>
       </tbody>
     </table>
   </section>
@@ -1307,8 +1310,7 @@ ex2:Profile_Y
             a document, with a <a href="#Property:format">dct:format</a> value of
             <a href="https://w3id.org/mediatype/text/turtle">text/turtle</a>, a
             <a href="#Property:conformsTo">dct:conformsTo</a> value of
-            <a href="http://www.w3.org/ns/shacl">http://www.w3.org/ns/shacl</a> (the namespace of the [[SHACL]]
-            specification) and a <a href="#Property:hasRole">prof:hasRole</a> value of
+            <a href="http://www.w3.org/ns/shacl">http://www.w3.org/ns/shacl</a> (the namespace of the [[SHACL]] standard) and a <a href="#Property:hasRole">prof:hasRole</a> value of
             <a href="#Role:constraints">role:Constraints</a>
           </li>
         </ul>
@@ -1508,7 +1510,7 @@ ex2:Profile_Y
 @prefix role: &lt;http://www.w3.org/ns/dx/prof/role/&gt; .
 
 
-# Base Specification being profiled
+# Base Standard being profiled
 &lt;http://dublincore.org/documents/2012/06/14/dcmi-terms/&gt; a dct:Standard ;
     rdfs:label "DCMI Metadata Terms" .
 
@@ -1682,7 +1684,7 @@ _:4
     <p>
       The Asset Description Metadata Schema (ADMS) [[VOCAB-ADMS]] is a profile of DCAT, used to describe semantic
       assets. Both ADMS the <code>Profile</code> and two of its <code>Resource Descriptors</code> are published
-      according to W3C specifications for <em>Recommendations</em> and <em>Working Group Notes</em>.
+      according to W3C standards for <em>Recommendations</em> and <em>Working Group Notes</em>.
     </p>
     <figure id="fig-eg-adms">
       <a href="examples/adms.svg">
@@ -1731,7 +1733,7 @@ _:4
 
 :ADMS-note
     a prof:ResourceDescriptor ;
-    rdfs:label "ADMS specification document" ;
+    rdfs:label "ADMS standard document" ;
     prof:hasRole roles:specification ;
     dct:conformsTo prof:W3Cnote ;
     dct:format &lt;https://w3id.org/mediatypes/text/html&gt; ;
@@ -1757,7 +1759,7 @@ _:4
 <section id="null-profile-examples" class="appendix informative">
   <h2>Null Profile Examples</h2>
   <p>
-    This appendix contains examples of <a>null profiles</a> of other specifications.
+    This appendix contains examples of <a>null profiles</a> of other standards.
   </p>
   <section id="null-profile-of-pos">
     <h3>Null Profile of POS</h3>
@@ -1777,7 +1779,7 @@ _:4
       slightly more complex null profile of a vocabulary looks like.
     </p>
     <p>
-      This null profile implements all the OWL rules of PROF as well as some rules stated in the PROF specification
+      This null profile implements all the OWL rules of PROF as well as some rules stated in the PROF document
       that are not implemented in the PROF ontology.
     </p>
     <p class="todo">TODO</p>
@@ -1786,7 +1788,7 @@ _:4
 <section id="testsuite">
   <h2>Test Suite</h2>
   <p>
-    A software suite is made available to test implementations of this vocabulary for compliance. This suite comprises of
+    A software suite is made available to test implementations of this vocabulary for compliance. This suite comprises
     [[SHACL]] RDF graph validation templates and instructions for the application of those templates to implementations.
   </p>
   <p></p>
@@ -1929,7 +1931,7 @@ _:4
   <section id="alignment-voaf">
     <h3>Vocabulary of a Friend</h3>
     <p>
-      Vocabulary of a Friend (VOAF) is a vocabulary specification providing elements allowing the description of
+      Vocabulary of a Friend (VOAF) is a vocabulary standard providing elements allowing the description of
       vocabularies (RDFS vocabularies or OWL ontologies) [[VOAF]]. Due to VOAF being defined for use with RDF data resources instances
       only, PROF has an alignment with VOAF which is instance-specific: data resources described by instances of PROF's
       <code>prof:ResourceDescriptor</code> class with the property <code>prof:resourceRole</code> linking to the
@@ -2055,11 +2057,11 @@ _:4
   <section id="features-at-risk">
     <h3>Features at risk</h3>
     <p>
-      The following features of in this specification are considered AT RISK pending evidence of implementation:
+      The following features of in this document are considered AT RISK pending evidence of implementation:
     </p>
     <aside class="note">
-      At the time of release of this specification as a <em>Working Group Note in December, 2019</em>, the list below
-      contains all specification features since no implementation evidence has formally been gathered yet. This list
+      At the time of release of this document as a <em>Working Group Note in December 2019</em>, the list below
+      contains all document features since no implementation evidence has formally been gathered yet. This list
       will be reduced as evidence is documented.
     </aside>
     <ul>
