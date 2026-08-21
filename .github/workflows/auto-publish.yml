@@ -3,7 +3,7 @@ on:
   pull_request:
     paths: ["prof/**"]
   push:
-    branches: [main]
+    branches: [gh-pages]
     paths: ["prof/**"]
 jobs:
   main:
