@@ -1,0 +1,25 @@
+name: Build, Validate & Echidna auto-publish
+on:
+  pull_request:
+    paths: ["prof/**"]
+  push:
+    branches: [main]
+    paths: ["prof/**"]
+jobs:
+  main:
+    name: Build, Validate & Echidna auto-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: w3c/spec-prod@v2
+        with:
+          TOOLCHAIN: respec
+          SOURCE: prof/index.html
+          VALIDATE_LINKS: false
+          VALIDATE_WEBIDL: false
+          VALIDATE_MARKUP: true
+          ACTIONS_STEP_DEBUG: true
+          W3C_ECHIDNA_TOKEN: ${{ secrets.ECHIDNA_TOKEN }}
+          W3C_WG_DECISION_URL: https://www.w3.org/2026/06/25-dxwg-minutes#4667
+          W3C_BUILD_OVERRIDE: |
+            specStatus: WD
