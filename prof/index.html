@@ -605,7 +605,7 @@ CSIRO's publications catalogue."""@en ;
   ] ;
 
   # other profile resources this profile contains
-  prof:hasResource ... ;
+  # prof:hasResource ... ;
 
   # a short code to refer to the Profile with when a URI can't be used
   prof:hasToken "profx"
@@ -645,7 +645,7 @@ CSIRO's publications catalogue."""@en ;
          title="Demonstrating conformance via the vocabulary's dct:conformsTo/prof:isProfileOf property chain.">
 # Profile X, is a profile of Standard Y
 &lt;http://example.org/profile/x> a prof:Profile ;
-      prof:isProfileOf &lt;http://example.org/specification/y>
+      prof:isProfileOf &lt;http://example.org/specification/y> ;
       dct:title "Profile X" .
 
 # A data resource indicating conformance to Profile X is given
@@ -1358,7 +1358,8 @@ ex2:Profile_Y
 &lt;https://joinup.ec.europa.eu/release/geodcat-ap-v10&gt;
   a prof:Profile ;
   rdfs:label "GeoDCAT-AP" ;
-  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; ;
+  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; 
+.
 
 &lt;https://joinup.ec.europa.eu/rdf_entity/http_e_f_fdata_ceuropa_ceu_fw21_f6f27f059_bf785_b4d7d_bb602_b6448aab73bd5&gt;
   a prof:ResourceDescriptor;
@@ -1420,32 +1421,32 @@ ex2:Profile_Y
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 
 &lt;http://www.w3.org/ns/dcat&gt;
-  a dct:Standard ;
+  a dct:Standard .
 
 &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt;
   a prof:Profile ;
   rdfs:label "DCAT-AP" ;
-  prof:isProfileOf &lt;http://www.w3.org/ns/dcat&gt; ;
+  prof:isProfileOf &lt;http://www.w3.org/ns/dcat&gt; .
 
 &lt;http://dcat.be&gt;
   a prof:Profile ;
   rdfs:label "DCAT-BE" ;
-  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; ;
+  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; .
 
 &lt;https://joinup.ec.europa.eu/release/geodcat-ap-v10&gt;
   a prof:Profile ;
   rdfs:label "GeoDCAT-AP" ;
-  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; ;
+  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; .
 
 &lt;https://joinup.ec.europa.eu/solution/statdcat-application-profile-data-portals-europ&gt;
   a prof:Profile ;
   rdfs:label "StatDCAT-AP" ;
-  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; ;
+  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/dcat-ap-v11&gt; .
 
 &lt;https://joinup.ec.europa.eu/news/geodcat-apit1&gt;
   a prof:Profile ;
   rdfs:label "GeoDCAT-AP_IT" ;
-  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/geodcat-ap-v10&gt; ;
+  prof:isProfileOf &lt;https://joinup.ec.europa.eu/release/geodcat-ap-v10&gt; .
 
 # an example as per the Figure above, not an existing profile
 &lt;http://example.org/profile/questionmark&gt;
@@ -1728,7 +1729,7 @@ _:4
     # this URI is for DCAT (original) as defined in the DCAT examples
     prof:profileOf &lt;http://www.w3.org/ns/dx/prof/examples/dcat.ttl#dcat2014&gt; ;
     prof:hasResource :ADMS-note ,
-                     :ADMS-rdf ,
+                     :ADMS-rdf 
 .
 
 :ADMS-note
